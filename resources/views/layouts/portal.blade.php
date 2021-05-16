@@ -6,10 +6,12 @@
 <body>
     @include('includes.portal.nav')
 
+    @include('includes.portal.footer')
+
+    <hr>
+
     <main>
         @yield('content')
     </main>
-
-    @include('includes.portal.footer')
 </body>
 </html>
