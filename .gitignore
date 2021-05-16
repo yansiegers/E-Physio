@@ -23,5 +23,8 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
+# PhpStorm
+.idea/workspace.xml
+
 # Other
 docker-compose.override.yml
