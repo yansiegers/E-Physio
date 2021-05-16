@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ========= General pages ======================================================
+
 Route::get('/', function () {
     return view('pages.home');
 })->name('home');
@@ -33,8 +35,20 @@ Route::get('/blog', function () {
     return view('pages.blog');
 })->name('blog');
 
-// ===============================================================
+// ========= Portal ======================================================
 
 Route::get('/dashboard', function () {
     return view('portal.dashboard');
 })->name('dashboard');
+
+Route::get('/kalender', function () {
+    return view('portal.calendar');
+})->name('calendar');
+
+Route::get('/oefeningen', function () {
+    return view('portal.exercises');
+})->name('exercises');
+
+Route::get('/account', function () {
+    return view('portal.account');
+})->name('account');

@@ -7,6 +7,6 @@
         <li><a href="{{ route('blog') }}">Blog</a></li>
     </ol>
     <ul>
-        <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+        <li><a href="{{ route('dashboard') }}">Mijn E-Physio</a></li>
     </ul>
 </nav>
