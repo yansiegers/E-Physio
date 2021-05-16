@@ -3,6 +3,5 @@
 ])
 
 @section('content')
-    <h1>Mijn E-Physio - Fysiotherapeuten</h1>
+    <h1 class="text-center">Mijn E-Physio - Fysiotherapeuten</h1>
 @stop
-

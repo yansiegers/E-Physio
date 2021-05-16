@@ -3,6 +3,5 @@
 ])
 
 @section('content')
-    <h1>E-Physio - Over</h1>
+    <h1 class="text-center">E-Physio - Over</h1>
 @stop
-
