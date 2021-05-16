@@ -14,5 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.home');
+})->name('home');
+
+Route::get('/over', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
+Route::get('/veel-gestelde-vragen', function () {
+    return view('pages.faq');
+})->name('faq');
+
+Route::get('/blog', function () {
+    return view('pages.blog');
+})->name('blog');
+
+// ===============================================================
+
+Route::get('/dashboard', function () {
+    return view('portal.dashboard');
+})->name('dashboard');
