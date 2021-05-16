@@ -6,9 +6,13 @@
 <body>
     @include('includes.pages.nav')
 
+    <hr>
+
     <main>
         @yield('content')
     </main>
+
+    <hr>
 
     @include('includes.pages.footer')
 </body>
