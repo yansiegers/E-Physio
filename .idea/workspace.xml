@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc79af9e-3449-4021-a363-6a228a7cdfde" name="Default Changelist" comment="" />
+    <list default="true" id="dc79af9e-3449-4021-a363-6a228a7cdfde" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/E-Physio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/E-Physio.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,6 +136,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -149,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621162589968</updated>
-      <workItem from="1621162593745" duration="110000" />
+      <workItem from="1621162593745" duration="436000" />
     </task>
     <servers />
   </component>
