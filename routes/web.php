@@ -52,3 +52,9 @@ Route::get('/oefeningen', function () {
 Route::get('/account', function () {
     return view('portal.account');
 })->name('account');
+
+// ========= Testing ======================================================
+
+Route::get('/design-kit', function () {
+    return view('design-kit');
+})->name('design-kit');

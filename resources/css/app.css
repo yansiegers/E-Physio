@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  body {
+    @apply font-serif /*text-tp-black bg-tp-white*/
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold text-center;
+  }
+  h1 { @apply text-2xl; }
+  h2 { @apply text-xl; }
+  h3 { @apply text-lg; }
+  h4 { @apply text-base; }
+  h5 { @apply text-base; }
+  h6 { @apply text-base; }
+
+  a { @apply underline }
+  /*a:hover { @apply text-tp-plants }*/
+  .no-link { @apply no-underline }
+  .no-link:hover { @apply underline /*text-tp-black*/ }
+
+  /* Buttons */
+  .btn {
+    @apply font-sans text-center no-underline rounded-md border /*border-tp-black*/ px-4 py-3
+  }
+  /*.btn:hover { @apply text-tp-black }*/
+
+  /*.btn-primary { @apply bg-tp-mint }*/
+  /*.btn-primary:hover,*/
+  /*.btn-primary:focus { @apply bg-tp-plants }*/
+
+  /*.btn-secondary { @apply bg-tp-sky }*/
+  /*.btn-secondary:hover,*/
+  /*.btn-secondary:focus{ @apply bg-tp-ocean }*/
+
+  /*.btn-tertiary { @apply bg-tp-white }*/
+  /*.btn-tertiary:hover,*/
+  /*.btn-tertiary:focus{ @apply bg-tp-rose }*/
+
+  /* Form */
+  /*form { @apply flex flex-col }*/
+  label { @apply block font-bold mt-4 mb-3 }
+  input,
+  select,
+  textarea {
+    @apply block
+  }
+
+  /*input::placeholder,*/
+  /*select::placeholder {*/
+  /*  @apply text-tp-ocean*/
+  /*}*/
+
+  input[type=text],
+  input[type=date],
+  input[type=datetime-local],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=time],
+  input[type=url],
+  input[type=week],
+  input[type=range],
+  select,
+  textarea {
+    @apply border /*border-tp-black*/ rounded-md px-4 py-3
+  }
+
+  input[type=submit],
+  button[type=submit],
+  input[type=reset],
+  button[type=reset],
+  input[type=button],
+  button[type=button] {
+    @apply btn /*btn-primary*/
+  }
+  /*input[type=submit]:hover,*/
+  /*input[type=submit]:focus,*/
+  /*input[type=reset]:hover,*/
+  /*input[type=reset]:focus,*/
+  /*input[type=button]:hover,*/
+  /*input[type=button]:focus {*/
+  /*  !* @apply btn:hover btn:focus*/
+  /*  btn-primary:hover btn-primary:focus *!*/
+  /*  @apply text-tp-black bg-tp-plants*/
+  /*}*/
+}
+
+/* Colors */
+/* tp-plants #84A882 */
+/* tp-mint #84A882 */
+/* tp-rose #F5DAD5 */
+/* tp-ocean #87A2A8 */
+/* tp-sky #D8E8F2 */
+/* tp-black #151E15 */
+
+/* Breakpoints */
+/* sm 640px */
+/* md 768px */
+/* lg 1024px */
+/* xl 1280px */
+/* 2xl 1536px */

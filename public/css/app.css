@@ -31831,6 +31831,162 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+body {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 { font-size: 1.5rem; line-height: 2rem;
+}
+
+h2 { font-size: 1.25rem; line-height: 1.75rem;
+}
+
+h3 { font-size: 1.125rem; line-height: 1.75rem;
+}
+
+h4 { font-size: 1rem; line-height: 1.5rem;
+}
+
+h5 { font-size: 1rem; line-height: 1.5rem;
+}
+
+h6 { font-size: 1rem; line-height: 1.5rem;
+}
+
+a { text-decoration: underline
+}
+
+/*a:hover { @apply text-tp-plants }*/
+
+.no-link { text-decoration: none
+}
+
+.no-link:hover { text-decoration: underline
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  text-decoration: none
+}
+
+/*.btn:hover { @apply text-tp-black }*/
+
+/*.btn-primary { @apply bg-tp-mint }*/
+
+/*.btn-primary:hover,*/
+
+/*.btn-primary:focus { @apply bg-tp-plants }*/
+
+/*.btn-secondary { @apply bg-tp-sky }*/
+
+/*.btn-secondary:hover,*/
+
+/*.btn-secondary:focus{ @apply bg-tp-ocean }*/
+
+/*.btn-tertiary { @apply bg-tp-white }*/
+
+/*.btn-tertiary:hover,*/
+
+/*.btn-tertiary:focus{ @apply bg-tp-rose }*/
+
+/* Form */
+
+form { display: flex; flex-direction: column
+}
+
+label { font-weight: 700; margin-bottom: 0.75rem; margin-top: 1rem
+}
+
+/*input::placeholder,*/
+
+/*select::placeholder {*/
+
+/*  @apply text-tp-ocean*/
+
+/*}*/
+
+input[type=text], input[type=date], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=range], select, textarea {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+input[type=submit], input[type=reset], input[type=button] {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  text-decoration: none
+}
+
+/*input[type=submit]:hover,*/
+
+/*input[type=submit]:focus,*/
+
+/*input[type=reset]:hover,*/
+
+/*input[type=reset]:focus,*/
+
+/*input[type=button]:hover,*/
+
+/*input[type=button]:focus {*/
+
+/*  !* @apply btn:hover btn:focus*/
+
+/*  btn-primary:hover btn-primary:focus *!*/
+
+/*  @apply text-tp-black bg-tp-plants*/
+
+/*}*/
+
+/* Colors */
+
+/* tp-plants #84A882 */
+
+/* tp-mint #84A882 */
+
+/* tp-rose #F5DAD5 */
+
+/* tp-ocean #87A2A8 */
+
+/* tp-sky #D8E8F2 */
+
+/* tp-black #151E15 */
+
+/* Breakpoints */
+
+/* sm 640px */
+
+/* md 768px */
+
+/* lg 1024px */
+
+/* xl 1280px */
+
+/* 2xl 1536px */
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
