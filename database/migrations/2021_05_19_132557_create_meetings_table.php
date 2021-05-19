@@ -20,7 +20,7 @@ class CreateMeetingsTable extends Migration
             $table->foreignId('physician_id')->constrained();
             $table->enum('type', ['interview', 'treatment']);
             $table->dateTime('start_date_time');
-            $table->dateTime('end_date_time');
+            $table->integer('duration');
 
             $table->timestamps();
         });
