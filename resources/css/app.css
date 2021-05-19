@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer utilities {
   body {
-    @apply font-serif /*text-tp-black bg-tp-white*/
+    @apply p-5 font-serif /* text-eph-black bg-eph-white */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -17,30 +17,30 @@
   h6 { @apply text-base; }
 
   a { @apply underline }
-  /*a:hover { @apply text-tp-plants }*/
+  a:hover { @apply text-eph-blue }
   .no-link { @apply no-underline }
-  .no-link:hover { @apply underline /*text-tp-black*/ }
+  .no-link:hover { @apply underline text-eph-black }
 
-  /* Buttons */
-  .btn {
-    @apply font-sans text-center no-underline rounded-md border /*border-tp-black*/ px-4 py-3
-  }
-  /*.btn:hover { @apply text-tp-black }*/
+  ol { @apply list-disc }
+  ul { @apply list-decimal }
 
-  /*.btn-primary { @apply bg-tp-mint }*/
-  /*.btn-primary:hover,*/
-  /*.btn-primary:focus { @apply bg-tp-plants }*/
 
-  /*.btn-secondary { @apply bg-tp-sky }*/
-  /*.btn-secondary:hover,*/
-  /*.btn-secondary:focus{ @apply bg-tp-ocean }*/
+  /* -Buttons- */
+  .btn { @apply font-sans font-bold text-center no-underline rounded-md px-4 py-3 }
+  /* .btn:hover { @apply text-eph-black } */
 
-  /*.btn-tertiary { @apply bg-tp-white }*/
-  /*.btn-tertiary:hover,*/
-  /*.btn-tertiary:focus{ @apply bg-tp-rose }*/
+  .btn-blue { @apply bg-eph-blue text-eph-blue-light }
+  .btn-purple { @apply bg-eph-purple text-eph-purple-light }
 
-  /* Form */
-  /*form { @apply flex flex-col }*/
+  .btn-blue-light { @apply bg-eph-blue-light text-eph-blue }
+  .btn-purple-light { @apply bg-eph-purple-light text-eph-purple }
+
+  /* .btn-blue:hover, */
+  /* .btn-blue:focus { @apply bg-eph-blue-light } */
+
+
+  /* -Form- */
+  /* form { @apply flex flex-col } */
   label { @apply block font-bold mt-4 mb-3 }
   input,
   select,
@@ -48,10 +48,10 @@
     @apply block
   }
 
-  /*input::placeholder,*/
-  /*select::placeholder {*/
-  /*  @apply text-tp-ocean*/
-  /*}*/
+  input::placeholder,
+  select::placeholder {
+    @apply text-eph-grey
+  }
 
   input[type=text],
   input[type=date],
@@ -68,7 +68,7 @@
   input[type=range],
   select,
   textarea {
-    @apply border /*border-tp-black*/ rounded-md px-4 py-3
+    @apply border border-eph-grey rounded-md px-4 py-3
   }
 
   input[type=submit],
@@ -77,27 +77,33 @@
   button[type=reset],
   input[type=button],
   button[type=button] {
-    @apply btn /*btn-primary*/
+    @apply btn btn-blue
   }
-  /*input[type=submit]:hover,*/
-  /*input[type=submit]:focus,*/
-  /*input[type=reset]:hover,*/
-  /*input[type=reset]:focus,*/
-  /*input[type=button]:hover,*/
-  /*input[type=button]:focus {*/
-  /*  !* @apply btn:hover btn:focus*/
-  /*  btn-primary:hover btn-primary:focus *!*/
-  /*  @apply text-tp-black bg-tp-plants*/
-  /*}*/
+  /* input[type=submit]:hover, */
+  /* input[type=submit]:focus, */
+  /* input[type=reset]:hover, */
+  /* input[type=reset]:focus, */
+  /* input[type=button]:hover, */
+  /* input[type=button]:focus { */
+    /* !* @apply btn:hover btn:focus */
+    /* btn-blue:hover btn-blue:focus *! */
+    /* @apply text-eph-black bg-eph-blue */
+  /* } */
 }
 
-/* Colors */
-/* tp-plants #84A882 */
-/* tp-mint #84A882 */
-/* tp-rose #F5DAD5 */
-/* tp-ocean #87A2A8 */
-/* tp-sky #D8E8F2 */
-/* tp-black #151E15 */
+
+/*  -Colors- */
+/* eph-blue #0089d0 */
+/* eph-blue-light #f2f9fc */
+
+/* eph-purple #a850ff */
+/* eph-purple-light #f6edff */
+
+/* eph-black #2c303d */
+/* eph-black-light #9fa3b6 */
+
+/* eph-grey #929db1 */
+/* eph-grey-light #f3f7fa  */
 
 /* Breakpoints */
 /* sm 640px */
