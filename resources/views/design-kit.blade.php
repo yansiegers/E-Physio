@@ -37,10 +37,10 @@
 
     <form action="/">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" placeholder="John Doe">
 
         <label class="block" for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" placeholder="example@email.com">
 
         <label for="birthday">Birthday:</label>
         <input type="date" id="birthday" name="birthday">
@@ -53,31 +53,30 @@
             <option value="audi">Audi</option>
         </select>
 
-        <input type="submit" value="Submit">
+        <button type="submit">Submit</button>
     </form>
 
-    <input id="text" type="text">
-    <input id="cehckbox" type="checkbox">
-    <input id="radio" type="radio">
+    <label for="text">text:</label><input id="text" type="text" placeholder="text">
+    <label for="checkbox">checkbox:</label><input id="checkbox" type="checkbox">
+    <label for="radio">radio:</label><input id="radio" type="radio">
 
-    <input id="date" type="date">
-    <input id="time" type="time">
-    <input id="week" type="week">
-    <input id="month" type="month">
-    <input id="datetime-local" type="datetime-local">
+    <label for="date">date:</label><input id="date" type="date">
+    <label for="time">time:</label><input id="time" type="time">
+    <label for="week">week:</label><input id="week" type="week">
+    <label for="month">month:</label><input id="month" type="month">
+    <label for="datetime">datetime:</label><input id="datetime-local" type="datetime-local">
 
-    <input id="email" type="email">
-    <input id="number" type="number">
-    <input id="password" type="password">
-    <input id="search" type="search">
-    <input id="tel" type="tel">
-    <input id="url" type="url">
+    <label for="email">email:</label><input id="email" type="email" placeholder="email@example.com">
+    <label for="number">number:</label><input id="number" type="1234">
+    <label for="password">password:</label><input id="password" type="password" placeholder="password">
+    <label for="search">search:</label><input id="search" type="search" placeholder="search">
+    <label for="tel">tel:</label><input id="tel" type="tel" placeholder="+31 0612345678">
+    <label for="url">url:</label><input id="url" type="url" placeholder="https://example.com/">
 
-    <input id="file" type="file">
-    <input id="image" type="image">
+    <label for="file">file:</label><input id="file" type="file">
 
-    {{--<input id="color" type="color">--}}
-    {{--<input id="range" type="range">--}}
+    {{-- <label for="color">color:</label><input id="color" type="color"> --}}
+    {{-- <label for="range">range:</label><input id="range" type="range"> --}}
 
     <input type="submit" value="Submit">
     <button type="submit">Submit</button>
