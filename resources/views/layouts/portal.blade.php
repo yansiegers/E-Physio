@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('includes.portal.head')
+    @include('includes.default')
+
+    <meta name="description" content="{{ isset($description) ? $description : '' }}">
+    <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}">
+    <title>Mijn {{ config('app.name') }}{{ isset($title) ? Str::title(' – '.$title) : '' }}</title>
+
+    @include('includes.styles')
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    @include('includes.portal.nav')
+    <!-- Sidebar -->
+    <div>
+        @include('layouts.portal.nav')
 
-    @include('includes.portal.footer')
+        @include('layouts.portal.footer')
+    </div>
 
     <hr>
 
+    <!-- Page Content -->
     <main>
-        @yield('content')
+        {{ $slot }}
     </main>
 </body>
 </html>

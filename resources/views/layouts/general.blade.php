@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('includes.pages.head')
+    @include('includes.default')
+
+    <meta name="description" content="{{ isset($description) ? $description : '' }}">
+    <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}">
+    <title>{{ config('app.name') }}{{ isset($title) ? Str::title(' – '.$title) : '' }}</title>
+
+    @include('includes.styles')
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    @include('includes.pages.nav')
+    @include('layouts.pages.nav')
 
     <hr>
 
+    <!-- Page Content -->
     <main>
-        @yield('content')
+        {{ $slot }}
     </main>
 
     <hr>
 
-    @include('includes.pages.footer')
+    @include('layouts.pages.footer')
 </body>
 </html>
