@@ -16,27 +16,36 @@
   h5 { @apply text-base; }
   h6 { @apply text-base; }
 
+  ol { @apply list-disc }
+  ul { @apply list-decimal }
+
+
+  /* -Links- */
   a { @apply underline }
   a:hover { @apply text-eph-blue }
   .no-link { @apply no-underline }
   .no-link:hover { @apply underline text-eph-black }
 
-  ol { @apply list-disc }
-  ul { @apply list-decimal }
-
 
   /* -Buttons- */
-  .btn { @apply font-sans font-bold text-center no-underline rounded-md px-4 py-3 }
+  .btn { @apply font-sans font-bold text-center no-underline px-4 py-3 }
   /* .btn:hover { @apply text-eph-black } */
 
   .btn-blue { @apply bg-eph-blue text-eph-blue-light }
-  .btn-purple { @apply bg-eph-purple text-eph-purple-light }
+  .btn-blue:hover,
+  .btn-blue:focus { @apply bg-eph-blue-light text-eph-blue }
 
   .btn-blue-light { @apply bg-eph-blue-light text-eph-blue }
-  .btn-purple-light { @apply bg-eph-purple-light text-eph-purple }
+  .btn-blue-light:hover,
+  .btn-blue-light:focus { @apply bg-eph-blue text-eph-blue-light }
 
-  /* .btn-blue:hover, */
-  /* .btn-blue:focus { @apply bg-eph-blue-light } */
+  .btn-purple { @apply bg-eph-purple text-eph-purple-light }
+  .btn-purple:hover,
+  .btn-purple:focus { @apply bg-eph-purple-light text-eph-purple }
+
+  .btn-purple-light { @apply bg-eph-purple-light text-eph-purple }
+  .btn-purple-light:hover,
+  .btn-purple-light:focus { @apply bg-eph-purple text-eph-purple-light }
 
 
   /* -Form- */
@@ -71,14 +80,14 @@
     @apply border border-eph-grey rounded-md px-4 py-3
   }
 
-  input[type=submit],
+  /* input[type=submit],
   button[type=submit],
   input[type=reset],
   button[type=reset],
   input[type=button],
   button[type=button] {
     @apply btn btn-blue
-  }
+  } */
   /* input[type=submit]:hover, */
   /* input[type=submit]:focus, */
   /* input[type=reset]:hover, */
