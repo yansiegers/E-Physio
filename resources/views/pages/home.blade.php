@@ -1,6 +1,4 @@
-@extends('layouts.general')
-
-@section('content')
+<x-general-layout>
     <h1 class="text-center">E-Physio</h1>
 
     <x-link-button href="/" class="btn-blue rounded-full">
@@ -18,4 +16,4 @@
     <x-link-button href="/" class="btn-purple-light rounded-full">
         {{ __('Purple Light') }}
     </x-link-button>
-@stop
+</x-general-layout>
