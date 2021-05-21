@@ -1,3 +1,113 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  body {
+    @apply p-5 font-serif /* text-eph-black bg-eph-white */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold text-center;
+  }
+  h1 { @apply text-2xl; }
+  h2 { @apply text-xl; }
+  h3 { @apply text-lg; }
+  h4 { @apply text-base; }
+  h5 { @apply text-base; }
+  h6 { @apply text-base; }
+
+  a { @apply underline }
+  a:hover { @apply text-eph-blue }
+  .no-link { @apply no-underline }
+  .no-link:hover { @apply underline text-eph-black }
+
+  ol { @apply list-disc }
+  ul { @apply list-decimal }
+
+
+  /* -Buttons- */
+  .btn { @apply font-sans font-bold text-center no-underline rounded-md px-4 py-3 }
+  /* .btn:hover { @apply text-eph-black } */
+
+  .btn-blue { @apply bg-eph-blue text-eph-blue-light }
+  .btn-purple { @apply bg-eph-purple text-eph-purple-light }
+
+  .btn-blue-light { @apply bg-eph-blue-light text-eph-blue }
+  .btn-purple-light { @apply bg-eph-purple-light text-eph-purple }
+
+  /* .btn-blue:hover, */
+  /* .btn-blue:focus { @apply bg-eph-blue-light } */
+
+
+  /* -Form- */
+  /* form { @apply flex flex-col } */
+  label { @apply block font-bold mt-4 mb-3 }
+  input,
+  select,
+  textarea {
+    @apply block
+  }
+
+  input::placeholder,
+  select::placeholder {
+    @apply text-eph-grey
+  }
+
+  input[type=text],
+  input[type=date],
+  input[type=datetime-local],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=time],
+  input[type=url],
+  input[type=week],
+  input[type=range],
+  select,
+  textarea {
+    @apply border border-eph-grey rounded-md px-4 py-3
+  }
+
+  input[type=submit],
+  button[type=submit],
+  input[type=reset],
+  button[type=reset],
+  input[type=button],
+  button[type=button] {
+    @apply btn btn-blue
+  }
+  /* input[type=submit]:hover, */
+  /* input[type=submit]:focus, */
+  /* input[type=reset]:hover, */
+  /* input[type=reset]:focus, */
+  /* input[type=button]:hover, */
+  /* input[type=button]:focus { */
+    /* !* @apply btn:hover btn:focus */
+    /* btn-blue:hover btn-blue:focus *! */
+    /* @apply text-eph-black bg-eph-blue */
+  /* } */
+}
+
+
+/*  -Colors- */
+/* eph-blue #0089d0 */
+/* eph-blue-light #f2f9fc */
+
+/* eph-purple #a850ff */
+/* eph-purple-light #f6edff */
+
+/* eph-black #2c303d */
+/* eph-black-light #9fa3b6 */
+
+/* eph-grey #929db1 */
+/* eph-grey-light #f3f7fa  */
+
+/* Breakpoints */
+/* sm 640px */
+/* md 768px */
+/* lg 1024px */
+/* xl 1280px */
+/* 2xl 1536px */

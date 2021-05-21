@@ -22,3 +22,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/account', function () {
+    return view('portal.account');
+})->name('account');
+
+// ========= Testing ======================================================
+
+Route::get('/design-kit', function () {
+    return view('design-kit');
+})->name('design-kit');
