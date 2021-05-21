@@ -32,3 +32,7 @@ Route::get('/account', function () {
 Route::get('/design-kit', function () {
     return view('design-kit');
 })->name('design-kit');
+
+Route::get('/motion-design', function () {
+    return view('motion-design');
+})->name('motion-design');
