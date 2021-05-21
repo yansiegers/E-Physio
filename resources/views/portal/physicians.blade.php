@@ -1,7 +1,5 @@
-@extends('layouts.portal', [
-  'title' => 'Fysiotherapeuten'
-])
+@section('title', 'Fysiotherapeuten')
 
-@section('content')
+<x-portal-layout>
     <h1 class="text-center">Mijn E-Physio - Fysiotherapeuten</h1>
-@stop
+</x-portal-layout>
