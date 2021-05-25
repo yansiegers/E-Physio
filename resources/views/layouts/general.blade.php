@@ -13,7 +13,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    @include('layouts.pages.nav')
+    <div class="bg-eph-blue-light font-sans mb-8">
+        @include('layouts.pages.nav')
+    </div>
 
     <hr>
 

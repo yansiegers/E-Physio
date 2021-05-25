@@ -46,6 +46,14 @@ Route::get('/blog', function () {
     return view('pages.blog');
 })->name('blog');
 
+Route::get('/algemene-voorwaarden', function () {
+    return view('pages.terms');
+})->name('terms');
+
+Route::get('/privacybeleid', function () {
+    return view('pages.privacy');
+})->name('privacy');
+
 // ========= Portal ======================================================
 
 // Route::get('/dashboard', function () {
