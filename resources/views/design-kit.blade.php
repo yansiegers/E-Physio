@@ -1,8 +1,6 @@
-@extends('layouts.test', [
-  'title' => 'Design kit'
-])
+@section('title', 'Design Kit')
 
-@section('content')
+<x-test-layout>
     <h1>Heading 1 - Design kit</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum eleifend tincidunt.</p>
 
@@ -35,26 +33,63 @@
 
     <hr/>
 
+    {{-- <form action="/">
+        <fieldset class="border p-5">
+            <legend>Test form</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+
+            <label class="block" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <label for="cars">Choose a car:</label>
+            <select id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <button class="btn btn-blue rounded-md" type="submit">Submit</button>
+        </fieldset>
+    </form> --}}
+
+    <hr>
+
     <form action="/">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="John Doe">
+        <fieldset class="border p-5">
+            <legend>Test form</legend>
 
-        <label class="block" for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com">
+            <div>
+                <x-label for="name" :value="__('Name')" />
+                <x-input id="name" type="text" name="name" required />
+            </div>
 
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday">
+            <div>
+                <x-label for="email" :value="__('Email')" />
+                <x-input id="email" type="email" name="email" :value="old('email')" required />
+            </div>
 
-        <label for="cars">Choose a car:</label>
-        <select id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-        </select>
+            <div>
+                <x-label for="birthday" :value="__('Birthday')" />
+                <x-input id="birthday" type="date" name="birthday" required />
+            </div>
 
-        <button type="submit">Submit</button>
+            @php
+                $list = json_encode(['Volvo', 'Saab', 'Opel', 'Audi']);
+            @endphp
+            <x-label for="cars" :value="__('Cars')"/>
+            <x-select id="cars" name="cars" value="Opel" :list="$list"/>
+
+            <x-button>{{ __('Submit') }}</x-button>
+        </fieldset>
     </form>
+
+    <hr>
 
     <label for="text">text:</label><input id="text" type="text" placeholder="text">
     <label for="checkbox">checkbox:</label><input id="checkbox" type="checkbox">
@@ -78,13 +113,13 @@
     {{-- <label for="color">color:</label><input id="color" type="color"> --}}
     {{-- <label for="range">range:</label><input id="range" type="range"> --}}
 
-    <input type="submit" value="Submit">
-    <button type="submit">Submit</button>
+    <input class="btn btn-blue rounded-md" type="submit" value="Submit">
+    <button class="btn btn-blue rounded-md" type="submit">Submit</button>
 
-    <input type="reset" value="Reset">
-    <button type="reset">Reset</button>
+    <input class="btn btn-blue rounded-md" type="reset" value="Reset">
+    <button class="btn btn-blue rounded-md" type="reset">Reset</button>
 
-    <input type="button" value="Button">
-    <button type="button">Button</button>
+    <input class="btn btn-blue rounded-md" type="button" value="Button">
+    <button class="btn btn-blue rounded-md" type="button">Button</button>
 
-@stop
+</x-test-layout>

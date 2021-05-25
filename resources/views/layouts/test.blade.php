@@ -12,7 +12,10 @@
 </head>
 <body>
 
-    @yield('content')
+    <!-- Page Content -->
+    <main class="container mx-auto p-5">
+        {{ $slot }}
+    </main>
 
 </body>
 </html>
