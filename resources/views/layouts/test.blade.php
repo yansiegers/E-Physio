@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('includes.pages.head')
+    @include('includes.default')
+
+    <title>{{ config('app.name') }}@if(View::hasSection('title')) - @yield('title')@endif</title>
+
+    @include('includes.styles')
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
 
