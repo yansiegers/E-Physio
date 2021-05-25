@@ -65,18 +65,18 @@
             <legend>Test form</legend>
 
             <div>
-                <x-label for="name" :value="__('Name')" />
-                <x-input id="name" type="text" name="name" required />
+                <x-label for="name" :value="__('Name')"/>
+                <x-input id="name" type="text" name="name" required/>
             </div>
 
             <div>
-                <x-label for="email" :value="__('Email')" />
-                <x-input id="email" type="email" name="email" :value="old('email')" required />
+                <x-label for="email" :value="__('Email')"/>
+                <x-input id="email" type="email" name="email" :value="old('email')" required/>
             </div>
 
             <div>
-                <x-label for="birthday" :value="__('Birthday')" />
-                <x-input id="birthday" type="date" name="birthday" required />
+                <x-label for="birthday" :value="__('Birthday')"/>
+                <x-input id="birthday" type="date" name="birthday" required/>
             </div>
 
             @php

@@ -18943,24 +18943,23 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Inter, sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
-h1 { font-size: 1.5rem; line-height: 2rem;
+h1 { font-size: 2.25rem; line-height: 2.5rem;
 }
 
-h2 { font-size: 1.25rem; line-height: 1.75rem;
+h2 { font-size: 1.875rem; line-height: 2.25rem;
 }
 
-h3 { font-size: 1.125rem; line-height: 1.75rem;
+h3 { font-size: 1.5rem; line-height: 2rem;
 }
 
-h4 { font-size: 1rem; line-height: 1.5rem;
+h4 { font-size: 1.25rem; line-height: 1.75rem;
 }
 
-h5 { font-size: 1rem; line-height: 1.5rem;
+h5 { font-size: 1.125rem; line-height: 1.75rem;
 }
 
 h6 { font-size: 1rem; line-height: 1.5rem;
@@ -18980,18 +18979,10 @@ a { text-decoration: underline
 a:hover { --tw-text-opacity: 1; color: rgba(0, 137, 208, var(--tw-text-opacity))
 }
 
-.no-link { text-decoration: none
-}
-
-.no-link:hover { --tw-text-opacity: 1; color: rgba(44, 48, 61, var(--tw-text-opacity)); text-decoration: underline
-}
-
 /* -Buttons- */
 
 .btn { font-family: Inter, sans-serif; font-weight: 700; padding-top: 0.75rem; padding-bottom: 0.75rem; padding-left: 1rem; padding-right: 1rem; text-align: center; text-decoration: none
 }
-
-/* .btn:hover { @apply text-eph-black } */
 
 .btn-blue { --tw-bg-opacity: 1; background-color: rgba(0, 137, 208, var(--tw-bg-opacity)); --tw-text-opacity: 1; color: rgba(242, 249, 252, var(--tw-text-opacity))
 }
@@ -19033,72 +19024,6 @@ a:hover { --tw-text-opacity: 1; color: rgba(0, 137, 208, var(--tw-text-opacity))
   color: rgba(246, 237, 255, var(--tw-text-opacity));
 }
 
-/* -Form- */
-
-/* form { @apply flex flex-col } */
-
-label { display: block; font-weight: 700; margin-bottom: 0.75rem; margin-top: 1rem
-}
-
-input, select, textarea {
-  display: block;
-}
-
-input::-moz-placeholder, select::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgba(146, 157, 177, var(--tw-text-opacity));
-}
-
-input:-ms-input-placeholder, select:-ms-input-placeholder {
-  --tw-text-opacity: 1;
-  color: rgba(146, 157, 177, var(--tw-text-opacity));
-}
-
-input::placeholder, select::placeholder {
-  --tw-text-opacity: 1;
-  color: rgba(146, 157, 177, var(--tw-text-opacity));
-}
-
-input[type=text], input[type=date], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=range], select, textarea {
-  --tw-border-opacity: 1;
-  border-color: rgba(146, 157, 177, var(--tw-border-opacity));
-  border-radius: 0.375rem;
-  border-width: 1px;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* input[type=submit],
-  button[type=submit],
-  input[type=reset],
-  button[type=reset],
-  input[type=button],
-  button[type=button] {
-    @apply btn btn-blue
-  } */
-
-/* input[type=submit]:hover, */
-
-/* input[type=submit]:focus, */
-
-/* input[type=reset]:hover, */
-
-/* input[type=reset]:focus, */
-
-/* input[type=button]:hover, */
-
-/* input[type=button]:focus { */
-
-/* !* @apply btn:hover btn:focus */
-
-/* btn-blue:hover btn-blue:focus *! */
-
-/* @apply text-eph-black bg-eph-blue */
-
-/* } */
-
 /*  -Colors- */
 
 /* eph-blue #0089d0 */
@@ -19117,7 +19042,7 @@ input[type=text], input[type=date], input[type=datetime-local], input[type=email
 
 /* eph-grey-light #f3f7fa  */
 
-/* Breakpoints */
+/* -Breakpoints- */
 
 /* sm 640px */
 
