@@ -97,6 +97,11 @@
             @endphp
             <x-forms.radio name="age" :list="$ages" value="60"/>
 
+            <div>
+                <x-forms.label for="review" :value="__('Review')"/>
+                <x-forms.textarea id="review" name="review">{{ old('review') }}</x-forms.textarea>
+            </div>
+
             <x-forms.button type="submit">{{ __('Submit') }}</x-forms.button>
         </fieldset>
     </form>
