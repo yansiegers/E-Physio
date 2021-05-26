@@ -75,5 +75,5 @@ Route::get('/account', function () {
 // ========= Testing ======================================================
 
 Route::get('/design-kit', function () {
-    return view('design-kit');
+    return view('pages.design-kit');
 })->name('design-kit');
