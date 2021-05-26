@@ -18944,7 +18944,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  text-align: center;
 }
 
 h1 { font-size: 2.25rem; line-height: 2.5rem;
@@ -18965,10 +18964,10 @@ h5 { font-size: 1.125rem; line-height: 1.75rem;
 h6 { font-size: 1rem; line-height: 1.5rem;
 }
 
-ol { list-style-type: disc
+ol { list-style-type: decimal
 }
 
-ul { list-style-type: decimal
+ul { list-style-type: disc
 }
 
 /* -Links- */

@@ -13,19 +13,17 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div class="bg-eph-blue-light font-sans mb-8">
+    <div class="bg-eph-blue-light mb-8">
         @include('layouts.pages.nav')
     </div>
 
-    <hr>
-
     <!-- Page Content -->
-    <main class="container mx-auto p-5">
+    <main class="container mx-auto lg:px-48 py-5">
         {{ $slot }}
     </main>
 
-    <hr>
-
-    @include('layouts.pages.footer')
+    <div class="bg-eph-blue-light mt-8">
+        @include('layouts.pages.footer')
+    </div>
 </body>
 </html>

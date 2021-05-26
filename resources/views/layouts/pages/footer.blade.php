@@ -1,4 +1,4 @@
-<footer class="container mx-auto p-5 flex justify-between items-center">
+<footer class="container mx-auto lg:px-48 py-5 flex justify-between items-center">
     <ul class="list-none">
         <x-links.footer :href="route('home')" :active="request()->routeIs('home')">
             © {{ Date('Y') }} {{ config('app.name') }}
