@@ -79,10 +79,23 @@
                 <x-forms.input id="birthday" type="date" name="birthday" required/>
             </div>
 
+            @php
+                $fruits = ['Banana', 'Orange', 'Strawberry']
+            @endphp
+
             <div>
                 <x-forms.label for="fruits" :value="__('Fruits')"/>
-                <x-forms.select id="fruits" name="fruits" value="Orange" :list="['Banana', 'Orange', 'Strawberry']"/>
+                <x-forms.select id="fruits" name="fruits" value="Orange" :list="$fruits"/>
             </div>
+
+            @php
+                $ages = [
+                    "30" => "0 - 30",
+                    "60" => "31 - 60",
+                    "100" => "61 - 100"
+                ];
+            @endphp
+            <x-forms.radio name="age" :list="$ages" value="60"/>
 
             <x-forms.button type="submit">{{ __('Submit') }}</x-forms.button>
         </fieldset>
