@@ -79,11 +79,10 @@
                 <x-input id="birthday" type="date" name="birthday" required/>
             </div>
 
-            @php
-                $list = json_encode(['Volvo', 'Saab', 'Opel', 'Audi']);
-            @endphp
-            <x-label for="cars" :value="__('Cars')"/>
-            <x-select id="cars" name="cars" value="Opel" :list="$list"/>
+            <div>
+                <x-label for="fruits" :value="__('Fruits')"/>
+                <x-forms.select id="fruits" name="fruits" value="Orange" :list="['Banana', 'Orange', 'Strawberry']"/>
+            </div>
 
             <x-button>{{ __('Submit') }}</x-button>
         </fieldset>
