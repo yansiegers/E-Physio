@@ -65,22 +65,22 @@
             <legend>Test form</legend>
 
             <div>
-                <x-label for="name" :value="__('Name')"/>
+                <x-forms.label for="name" :value="__('Name')"/>
                 <x-input id="name" type="text" name="name" required/>
             </div>
 
             <div>
-                <x-label for="email" :value="__('Email')"/>
+                <x-forms.label for="email" :value="__('Email')"/>
                 <x-input id="email" type="email" name="email" :value="old('email')" required/>
             </div>
 
             <div>
-                <x-label for="birthday" :value="__('Birthday')"/>
+                <x-forms.label for="birthday" :value="__('Birthday')"/>
                 <x-input id="birthday" type="date" name="birthday" required/>
             </div>
 
             <div>
-                <x-label for="fruits" :value="__('Fruits')"/>
+                <x-forms.label for="fruits" :value="__('Fruits')"/>
                 <x-forms.select id="fruits" name="fruits" value="Orange" :list="['Banana', 'Orange', 'Strawberry']"/>
             </div>
 
@@ -90,27 +90,27 @@
 
     <hr>
 
-    <label for="text">text:</label><input id="text" type="text" placeholder="text">
-    <label for="checkbox">checkbox:</label><input id="checkbox" type="checkbox">
-    <label for="radio">radio:</label><input id="radio" type="radio">
+    <x-forms.label for="text" value="text"/>            <input id="text" type="text" placeholder="text">
+    <x-forms.label for="checkbox" value="checkbox"/>    <input id="checkbox" type="checkbox">
+    <x-forms.label for="radio" value="radio"/>          <input id="radio" type="radio">
 
-    <label for="date">date:</label><input id="date" type="date">
-    <label for="time">time:</label><input id="time" type="time">
-    <label for="week">week:</label><input id="week" type="week">
-    <label for="month">month:</label><input id="month" type="month">
-    <label for="datetime">datetime:</label><input id="datetime-local" type="datetime-local">
+    <x-forms.label for="date" value="date"/>            <input id="date" type="date">
+    <x-forms.label for="time" value="time"/>            <input id="time" type="time">
+    <x-forms.label for="week" value="week"/>            <input id="week" type="week">
+    <x-forms.label for="month" value="month"/>          <input id="month" type="month">
+    <x-forms.label for="datetime" value="datetime"/>    <input id="datetime-local" type="datetime-local">
 
-    <label for="email">email:</label><input id="email" type="email" placeholder="email@example.com">
-    <label for="number">number:</label><input id="number" type="1234">
-    <label for="password">password:</label><input id="password" type="password" placeholder="password">
-    <label for="search">search:</label><input id="search" type="search" placeholder="search">
-    <label for="tel">tel:</label><input id="tel" type="tel" placeholder="+31 0612345678">
-    <label for="url">url:</label><input id="url" type="url" placeholder="https://example.com/">
+    <x-forms.label for="email" value="email"/>          <input id="email" type="email" placeholder="email@example.com">
+    <x-forms.label for="number" value="number"/>        <input id="number" type="1234">
+    <x-forms.label for="password" value="password"/>    <input id="password" type="password" placeholder="password">
+    <x-forms.label for="search" value="search"/>        <input id="search" type="search" placeholder="search">
+    <x-forms.label for="tel" value="tel"/>              <input id="tel" type="tel" placeholder="+31 0612345678">
+    <x-forms.label for="url" value="url"/>              <input id="url" type="url" placeholder="https://example.com/">
 
-    <label for="file">file:</label><input id="file" type="file">
+    <x-forms.label for="file" value="file"/>            <input id="file" type="file">
 
-    {{-- <label for="color">color:</label><input id="color" type="color"> --}}
-    {{-- <label for="range">range:</label><input id="range" type="range"> --}}
+    {{-- <label for="color">color</label><input id="color" type="color"> --}}
+    {{-- <label for="range">range</label><input id="range" type="range"> --}}
 
     <x-forms.button type="submit">Submit</x-forms.button>
     <x-forms.button type="reset">Reset</x-forms.button>
