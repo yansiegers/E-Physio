@@ -84,7 +84,7 @@
                 <x-forms.select id="fruits" name="fruits" value="Orange" :list="['Banana', 'Orange', 'Strawberry']"/>
             </div>
 
-            <x-button>{{ __('Submit') }}</x-button>
+            <x-forms.button type="submit">{{ __('Submit') }}</x-forms.button>
         </fieldset>
     </form>
 
@@ -112,13 +112,8 @@
     {{-- <label for="color">color:</label><input id="color" type="color"> --}}
     {{-- <label for="range">range:</label><input id="range" type="range"> --}}
 
-    <input class="btn btn-blue rounded-md" type="submit" value="Submit">
-    <button class="btn btn-blue rounded-md" type="submit">Submit</button>
-
-    <input class="btn btn-blue rounded-md" type="reset" value="Reset">
-    <button class="btn btn-blue rounded-md" type="reset">Reset</button>
-
-    <input class="btn btn-blue rounded-md" type="button" value="Button">
-    <button class="btn btn-blue rounded-md" type="button">Button</button>
+    <x-forms.button type="submit">Submit</x-forms.button>
+    <x-forms.button type="reset">Reset</x-forms.button>
+    <x-forms.button type="button">Button</x-forms.button>
 
 </x-test-layout>
