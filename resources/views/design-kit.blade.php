@@ -31,7 +31,7 @@
         <li>Milk</li>
     </ul>
 
-    <hr/>
+    <hr>
 
     {{-- <form action="/">
         <fieldset class="border p-5">
@@ -66,17 +66,17 @@
 
             <div>
                 <x-forms.label for="name" :value="__('Name')"/>
-                <x-input id="name" type="text" name="name" required/>
+                <x-forms.input id="name" type="text" name="name" required/>
             </div>
 
             <div>
                 <x-forms.label for="email" :value="__('Email')"/>
-                <x-input id="email" type="email" name="email" :value="old('email')" required/>
+                <x-forms.input id="email" type="email" name="email" :value="old('email')" required/>
             </div>
 
             <div>
                 <x-forms.label for="birthday" :value="__('Birthday')"/>
-                <x-input id="birthday" type="date" name="birthday" required/>
+                <x-forms.input id="birthday" type="date" name="birthday" required/>
             </div>
 
             <div>
@@ -90,24 +90,24 @@
 
     <hr>
 
-    <x-forms.label for="text" value="text"/>            <input id="text" type="text" placeholder="text">
-    <x-forms.label for="checkbox" value="checkbox"/>    <input id="checkbox" type="checkbox">
-    <x-forms.label for="radio" value="radio"/>          <input id="radio" type="radio">
+    <x-forms.label for="text" value="text"/>            <x-forms.input id="text" type="text" placeholder="text"/>
+    <x-forms.label for="checkbox" value="checkbox"/>    <x-forms.input id="checkbox" type="checkbox"/>
+    <x-forms.label for="radio" value="radio"/>          <x-forms.input id="radio" type="radio"/>
 
-    <x-forms.label for="date" value="date"/>            <input id="date" type="date">
-    <x-forms.label for="time" value="time"/>            <input id="time" type="time">
-    <x-forms.label for="week" value="week"/>            <input id="week" type="week">
-    <x-forms.label for="month" value="month"/>          <input id="month" type="month">
-    <x-forms.label for="datetime" value="datetime"/>    <input id="datetime-local" type="datetime-local">
+    <x-forms.label for="date" value="date"/>            <x-forms.input id="date" type="date"/>
+    <x-forms.label for="time" value="time"/>            <x-forms.input id="time" type="time"/>
+    <x-forms.label for="week" value="week"/>            <x-forms.input id="week" type="week"/>
+    <x-forms.label for="month" value="month"/>          <x-forms.input id="month" type="month"/>
+    <x-forms.label for="datetime" value="datetime"/>    <x-forms.input id="datetime-local" type="datetime-local"/>
 
-    <x-forms.label for="email" value="email"/>          <input id="email" type="email" placeholder="email@example.com">
-    <x-forms.label for="number" value="number"/>        <input id="number" type="1234">
-    <x-forms.label for="password" value="password"/>    <input id="password" type="password" placeholder="password">
-    <x-forms.label for="search" value="search"/>        <input id="search" type="search" placeholder="search">
-    <x-forms.label for="tel" value="tel"/>              <input id="tel" type="tel" placeholder="+31 0612345678">
-    <x-forms.label for="url" value="url"/>              <input id="url" type="url" placeholder="https://example.com/">
+    <x-forms.label for="email" value="email"/>          <x-forms.input id="email" type="email" placeholder="email@example.com"/>
+    <x-forms.label for="number" value="number"/>        <x-forms.input id="number" type="number" placeholder="1234"/>
+    <x-forms.label for="password" value="password"/>    <x-forms.input id="password" type="password" placeholder="password"/>
+    <x-forms.label for="search" value="search"/>        <x-forms.input id="search" type="search" placeholder="search"/>
+    <x-forms.label for="tel" value="tel"/>              <x-forms.input id="tel" type="tel" placeholder="+31 0612345678"/>
+    <x-forms.label for="url" value="url"/>              <x-forms.input id="url" type="url" placeholder="https://example.com/"/>
 
-    <x-forms.label for="file" value="file"/>            <input id="file" type="file">
+    <x-forms.label for="file" value="file"/>            <x-forms.input id="file" type="file"/>
 
     {{-- <label for="color">color</label><input id="color" type="color"> --}}
     {{-- <label for="range">range</label><input id="range" type="range"> --}}
