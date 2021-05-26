@@ -6,20 +6,20 @@
     </div>
 
     <ul class="list-none flex items-center">
-        {{-- <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+        {{-- <x-links.nav :href="route('home')" :active="request()->routeIs('home')">
             {{ config('app.name') }}
-        </x-nav-link> --}}
-        <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+        </x-links.nav> --}}
+        <x-links.nav :href="route('about')" :active="request()->routeIs('about')">
             {{ __('Over') }}
-        </x-nav-link>
-        <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+        </x-links.nav>
+        <x-links.nav :href="route('contact')" :active="request()->routeIs('contact')">
             {{ __('Contact') }}
-        </x-nav-link>
-        <x-nav-link :href="route('faq')" :active="request()->routeIs('faq')">
+        </x-links.nav>
+        <x-links.nav :href="route('faq')" :active="request()->routeIs('faq')">
             {{ __('Veel gestelde vragen') }}
-        </x-nav-link>
-        <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
+        </x-links.nav>
+        <x-links.nav :href="route('blog')" :active="request()->routeIs('blog')">
             {{ __('Blog') }}
-        </x-nav-link>
+        </x-links.nav>
     </ul>
 </nav>
