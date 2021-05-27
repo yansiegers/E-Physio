@@ -1,7 +1,7 @@
 @section('title', 'Dashboard')
 
 <x-portal-layout>
-    <h1 class="text-center">Mijn E-Physio - Dashboard</h1>
+    <h1 class="heading-h1 text-center">Mijn E-Physio - Dashboard</h1>
 
     <ul>
         <li><a href="{{ route('calendar') }}">Kalender</a></li>
