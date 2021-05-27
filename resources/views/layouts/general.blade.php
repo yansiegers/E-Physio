@@ -18,7 +18,7 @@
     </div>
 
     <!-- Page Content -->
-    <main class="container mx-auto lg:px-48 py-5">
+    <main class="container mx-auto lg:px-48 py-5 prose">
         {{ $slot }}
     </main>
 

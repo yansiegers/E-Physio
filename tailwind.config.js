@@ -1,5 +1,7 @@
 // const defaultTheme = require("tailwindcss/defaultTheme");
 
+const { fontSize } = require("tailwindcss/defaulttheme");
+
 module.exports = {
   purge: [
     "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
@@ -10,8 +12,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-        sans: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        mulish: ["Mulish", "sans-serif"],
       },
     },
     colors: {
@@ -41,5 +43,5 @@ module.exports = {
     },
   },
 
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 };

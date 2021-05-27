@@ -1,50 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Mulish:ital,wght@0,900;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
   body {
-    @apply font-sans /* text-eph-black bg-eph-white */
+    @apply font-inter font-normal text-xl text-eph-black !important;
+  }
+  .body-small {
+    @apply text-base !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+  .heading-h1,
+  .heading-h2,
+  .heading-h3,
+  .heading-h4,
+  .heading-h5,
+  .heading-h6 {
+    @apply font-mulish font-black !important;
   }
-  h1 { @apply text-4xl; }
-  h2 { @apply text-3xl; }
-  h3 { @apply text-2xl; }
-  h4 { @apply text-xl; }
-  h5 { @apply text-lg; }
-  h6 { @apply text-base; }
-
-  ol { @apply list-decimal }
-  ul { @apply list-disc }
-
+  .heading-h1 {
+    @apply text-6xl !important;
+  }
+  .heading-h2 {
+    @apply text-5xl !important;
+  }
+  .heading-h3 {
+    @apply text-4xl !important;
+  }
+  .heading-h4 {
+    @apply text-3xl !important;
+  }
+  .heading-h5 {
+    @apply text-2xl !important;
+  }
+  .heading-h6 {
+    @apply text-xl !important;
+  }
 
   /* -Links- */
-  a { @apply underline }
-  a:hover { @apply text-eph-blue }
-
+  .link:link {
+    @apply text-eph-blue no-underline !important;
+  }
+  .link:visited {
+    @apply text-eph-purple !important;
+  }
+  .link:hover,
+  .link:active {
+    @apply underline !important;
+  }
 
   /* -Buttons- */
-  .btn { @apply font-sans font-bold text-center no-underline px-4 py-3 }
+  .btn {
+    @apply font-sans font-bold text-center no-underline px-4 py-3 !important;
+  }
 
-  .btn-blue { @apply bg-eph-blue text-eph-blue-light }
+  .btn-blue {
+    @apply bg-eph-blue text-eph-blue-light !important;
+  }
   .btn-blue:hover,
-  .btn-blue:focus { @apply bg-eph-blue-light text-eph-blue }
+  .btn-blue:focus {
+    @apply bg-eph-blue-light text-eph-blue !important;
+  }
 
-  .btn-blue-light { @apply bg-eph-blue-light text-eph-blue }
+  .btn-blue-light {
+    @apply bg-eph-blue-light text-eph-blue !important;
+  }
   .btn-blue-light:hover,
-  .btn-blue-light:focus { @apply bg-eph-blue text-eph-blue-light }
+  .btn-blue-light:focus {
+    @apply bg-eph-blue text-eph-blue-light !important;
+  }
 
-  .btn-purple { @apply bg-eph-purple text-eph-purple-light }
+  .btn-purple {
+    @apply bg-eph-purple text-eph-purple-light !important;
+  }
   .btn-purple:hover,
-  .btn-purple:focus { @apply bg-eph-purple-light text-eph-purple }
+  .btn-purple:focus {
+    @apply bg-eph-purple-light text-eph-purple !important;
+  }
 
-  .btn-purple-light { @apply bg-eph-purple-light text-eph-purple }
+  .btn-purple-light {
+    @apply bg-eph-purple-light text-eph-purple !important;
+  }
   .btn-purple-light:hover,
-  .btn-purple-light:focus { @apply bg-eph-purple text-eph-purple-light }
+  .btn-purple-light:focus {
+    @apply bg-eph-purple text-eph-purple-light !important;
+  }
 }
-
 
 /*  -Colors- */
 /* eph-blue #0089d0 */
@@ -58,7 +100,6 @@
 
 /* eph-grey #929db1 */
 /* eph-grey-light #f3f7fa  */
-
 
 /* -Breakpoints- */
 /* sm 640px */
