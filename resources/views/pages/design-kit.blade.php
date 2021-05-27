@@ -51,7 +51,8 @@
         <h3 class="heading-h3" id="links">Links en knoppen</h3>
         <p>Dit is een <a class="link" href="#">algemene link</a> die overal voor kan komen.</p>
 
-        <x-links.button href="#" class="btn-blue rounded-full">CTA blauw</x-links.button><x-links.button href="#" class="btn-purple rounded-full">CTA paars</x-links.button>
+        <x-links.button href="#" class="btn-blue rounded-full">CTA blauw</x-links.button>
+        <x-links.button href="#" class="btn-purple rounded-full">CTA paars</x-links.button>
         <x-links.button href="#" class="btn-blue-light rounded-full">CTA lichtblauw</x-links.button>
         <x-links.button href="#" class="btn-purple-light rounded-full">CTA lichtpaars</x-links.button>
 
@@ -91,99 +92,191 @@
         <h2 class="heading-h2" id="form">Testformulier</h2>
         <p>Dit is hoe een formulier er uit zou kunnen zien.</p>
 
-        <form action="/">
+        <form action="/" class="space-y-6">
             <div>
-                <x-forms.label for="name" :value="__('Name')" />
+                <x-forms.label for="name" :value="__('Naam')" />
                 <x-forms.input id="name" type="text" name="name" required />
             </div>
 
             <div>
-                <x-forms.label for="email" :value="__('Email')" />
-                <x-forms.input id="email" type="email" name="email" :value="old('email')" required />
+                <x-forms.label for="email" :value="__('E-mailadres')" />
+                <x-forms.input id="email" type="email" name="email" :value="old('email')" placeholder="e-mail@voorbeeld.nl"
+                    required />
             </div>
 
             <div>
-                <x-forms.label for="birthday" :value="__('Birthday')" />
+                <x-forms.label for="birthday" :value="__('Verjaardag')" />
                 <x-forms.input id="birthday" type="date" name="birthday" required />
             </div>
 
-            @php
-                $fruits = ['Banana', 'Orange', 'Strawberry'];
-            @endphp
-
             <div>
-                <x-forms.label for="fruits" :value="__('Fruits')" />
-                <x-forms.select id="fruits" name="fruits" value="Orange" :list="$fruits" />
+                @php
+                    $fruits = ['Banaan', 'Sinaasappel', 'Aardbei'];
+                @endphp
+                <x-forms.label for="fruits" :value="__('Fruitsoorten')" />
+                <x-forms.select id="fruits" name="fruits" value="Sinaasappel" :list="$fruits" />
             </div>
 
-            @php
-                $ages = [
-                    '30' => '0 - 30',
-                    '60' => '31 - 60',
-                    '100' => '61 - 100',
-                ];
-            @endphp
-            <x-forms.radio name="age" :list="$ages" value="60" />
+            <div>
+                @php
+                    $ages = [
+                        '30' => '0 - 30 jaar',
+                        '60' => '31 - 60 jaar',
+                        '100' => '61 - 100 jaar',
+                    ];
+                @endphp
+                <x-forms.label :value="__('Hoe oud ben je?')" />
+                <x-forms.radio name="age" :list="$ages" value="60" />
+            </div>
+
+            <div>
+                <x-forms.label :value="__('Welk vervoer heb je?')" />
+                <div>
+                    <x-forms.input id="car" type="checkbox" />
+                    <x-forms.label for="car" class="inline" :value="__('Auto')" />
+                </div>
+                <div>
+                    <x-forms.input id="bicycle" type="checkbox" />
+                    <x-forms.label for="bicycle" class="inline" :value="__('Fiets')" checked />
+                </div>
+                <div>
+                    <x-forms.input id="scooter" type="checkbox" />
+                    <x-forms.label for="scooter" class="inline" :value="__('Scooter')" />
+                </div>
+            </div>
 
             <div>
                 <x-forms.label for="review" :value="__('Review')" />
-                <x-forms.textarea id="review" name="review">{{ old('review') }}</x-forms.textarea>
+                <x-forms.textarea id="review" name="review" placeholder="Wat vond je er van?">{{ old('review') }}
+                </x-forms.textarea>
             </div>
 
-            <x-forms.button type="submit">{{ __('Submit') }}</x-forms.button>
+            <x-forms.button type="submit">{{ __('Indienen') }}</x-forms.button>
         </form>
 
         <h2 class="heading-h2" id="inputs">Andere invoervelden</h2>
         <p>Hieronder staan andere invoervelden die gebruikt kunnen worden.</p>
 
         <h3 class="heading-h3" id="general">Algemeen</h3>
-        <x-forms.label for="text" value="Tekst (text)" />
-        <x-forms.input id="text" type="text" placeholder="Tekst" />
-        <x-forms.label for="checkbox" value="Vinkje (checkbox)" />
-        <x-forms.input id="checkbox" type="checkbox" />
-        <x-forms.label for="radio" value="Selectie (radio)" />
-        <x-forms.input id="radio" type="radio" />
+        <div class="space-y-6">
+            <div>
+                <x-forms.label for="text" value="Tekst (text)" />
+                <x-forms.input id="text" type="text" placeholder="Tekst" />
+            </div>
+
+            <div>
+                @php
+                    $dropdown = ['Selectie 1', 'Selectie 2', 'Selectie 3'];
+                @endphp
+                <x-forms.label for="select" value="Dropdown (select)" />
+                <x-forms.select id="select" name="select" value="Selectie 2" :list="$dropdown" />
+            </div>
+
+            <div>
+                <x-forms.label value="Selectievakje (checkbox)" />
+                <div>
+                    <x-forms.input id="option1" type="checkbox" />
+                    <x-forms.label for="option1" class="inline" value="Optie 1" />
+                </div>
+                <div>
+                    <x-forms.input id="option2" type="checkbox" checked />
+                    <x-forms.label for="option2" class="inline" value="Optie 2" />
+                </div>
+                <div>
+                    <x-forms.input id="option3" type="checkbox" />
+                    <x-forms.label for="option3" class="inline" value="Optie 3" />
+                </div>
+            </div>
+
+            <div>
+                @php
+                    $choices = [
+                        '1' => 'Keuze 1',
+                        '2' => 'Keuze 2',
+                        '3' => 'Keuze 3',
+                    ];
+                @endphp
+                <x-forms.label value="Selectie (radio)" />
+                <x-forms.radio name="radio" :list="$choices" value="2" />
+            </div>
+        </div>
 
         <h3 class="heading-h3" id="data">Gegevens</h3>
-        <x-forms.label for="email" value="E-mailadres (email)" />
-        <x-forms.input id="email" type="email" placeholder="email@example.com" />
-        <x-forms.label for="password" value="Wachtwoord (password)" />
-        <x-forms.input id="password" type="password" placeholder="Wachtwoord" />
-        <x-forms.label for="tel" value="Telefoonnummer (tel)" />
-        <x-forms.input id="tel" type="tel" placeholder="+31 0612345678" />
+        <div class="space-y-6">
+            <div>
+                <x-forms.label for="email" value="E-mailadres (email)" />
+                <x-forms.input id="email" type="email" placeholder="e-mail@voorbeeld.nl" />
+            </div>
+            <div>
+                <x-forms.label for="password" value="Wachtwoord (password)" />
+                <x-forms.input id="password" type="password" placeholder="Wachtwoord" />
+            </div>
+            <div>
+                <x-forms.label for="tel" value="Telefoonnummer (tel)" />
+                <x-forms.input id="tel" type="tel" placeholder="+31 0612345678" />
+            </div>
+        </div>
 
         <h3 class="heading-h3" id="dates">Datums en tijd</h3>
-        <x-forms.label for="date" value="Datum (date)" />
-        <x-forms.input id="date" type="date" />
-        <x-forms.label for="time" value="Tijd (time)" />
-        <x-forms.input id="time" type="time" />
-        <x-forms.label for="week" value="Week (week)" />
-        <x-forms.input id="week" type="week" />
-        <x-forms.label for="month" value="Maand (month)" />
-        <x-forms.input id="month" type="month" />
-        <x-forms.label for="datetime" value="Datum en tijd (datetime)" />
-        <x-forms.input id="datetime" type="datetime" />
-        <x-forms.label for="datetime-local" value="Lokale datum en tijd (datetime-local)" />
-        <x-forms.input id="datetime-local" type="datetime-local" />
+        <div class="space-y-6">
+            <div>
+                <x-forms.label for="date" value="Datum (date)" />
+                <x-forms.input id="date" type="date" />
+            </div>
+            <div>
+                <x-forms.label for="time" value="Tijd (time)" />
+                <x-forms.input id="time" type="time" />
+            </div>
+            <div>
+                <x-forms.label for="week" value="Week (week)" />
+                <x-forms.input id="week" type="week" />
+            </div>
+            <div>
+                <x-forms.label for="month" value="Maand (month)" />
+                <x-forms.input id="month" type="month" />
+            </div>
+            <div>
+                <x-forms.label for="datetime" value="Datum en tijd (datetime)" />
+                <x-forms.input id="datetime" type="datetime" />
+            </div>
+            <div>
+                <x-forms.label for="datetime-local" value="Lokale datum en tijd (datetime-local)" />
+                <x-forms.input id="datetime-local" type="datetime-local" />
+            </div>
+        </div>
 
         <h3 class="heading-h3" id="files">Bestanden</h3>
-        <x-forms.label for="file" value="Bestand (file)" />
-        <x-forms.input id="file" type="file" />
+        <div class="space-y-6">
+            <div>
+                <x-forms.label for="file" value="Bestand (file)" />
+                <x-forms.input id="file" type="file" />
+            </div>
+        </div>
 
         <h3 class="heading-h3" id="other">Overig</h3>
-        <x-forms.label for="search" value="Zoeken (search)" />
-        <x-forms.input id="search" type="search" placeholder="Zoeken..." />
-        <x-forms.label for="number" value="Nummer (number)" />
-        <x-forms.input id="number" type="number" placeholder="123" />
-        <x-forms.label for="url" value="URL (url)" />
-        <x-forms.input id="url" type="url" placeholder="https://example.com/" />
-        {{-- <label for="color">color</label><input id="color" type="color"> --}}
-        {{-- <label for="range">range</label><input id="range" type="range"> --}}
+        <div class="space-y-6">
+            <div>
+                <x-forms.label for="search" value="Zoeken (search)" />
+                <x-forms.input id="search" type="search" placeholder="Zoeken..." />
+            </div>
+            <div>
+                <x-forms.label for="number" value="Nummer (number)" />
+                <x-forms.input id="number" type="number" placeholder="123" />
+            </div>
+            <div>
+                <x-forms.label for="url" value="URL (url)" />
+                <x-forms.input id="url" type="url" placeholder="https://example.com/" />
+            </div>
+            {{-- <label for="color">color</label><input id="color" type="color"> --}}
+            {{-- <label for="range">range</label><input id="range" type="range"> --}}
+        </div>
 
         <h3 class="heading-h3" id="buttons">Knoppen</h3>
         <p>Deze knoppen zijn alleen bedoeld voor formulieren.</p>
-        <x-forms.button type="submit">Indienen</x-forms.button>
-        <x-forms.button type="reset">Resetten</x-forms.button>
-        <x-forms.button type="button">Knop</x-forms.button>
+        <div class="space-y-6">
+            <x-forms.button type="submit">Indienen</x-forms.button>
+            <x-forms.button type="reset">Resetten</x-forms.button>
+            <x-forms.button type="button">Knop</x-forms.button>
+        </div>
 
     </x-general-layout>
