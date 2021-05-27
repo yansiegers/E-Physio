@@ -1,14 +1,11 @@
 <nav class="container mx-auto lg:px-48 py-5 flex justify-between items-center">
     <div class="flex items-center">
         <a href="{{ route('home') }}">
-            <x-application-logo class="block h-10 w-auto" />
+            <x-logo class="block h-10 w-auto" />
         </a>
     </div>
 
     <ul class="list-none flex items-center">
-        {{-- <x-links.nav :href="route('home')" :active="request()->routeIs('home')">
-            {{ config('app.name') }}
-        </x-links.nav> --}}
         <x-links.nav :href="route('about')" :active="request()->routeIs('about')">
             {{ __('Over') }}
         </x-links.nav>
