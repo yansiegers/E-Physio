@@ -51,10 +51,15 @@
         <h3 class="heading-h3" id="links">Links en knoppen</h3>
         <p>Dit is een <a class="link" href="#">algemene link</a> die overal voor kan komen.</p>
 
-        <x-links.button href="#" class="btn-blue rounded-full">CTA blauw</x-links.button>
+        {{-- <x-links.button href="#" class="btn-blue rounded-full">CTA blauw</x-links.button>
         <x-links.button href="#" class="btn-purple rounded-full">CTA paars</x-links.button>
         <x-links.button href="#" class="btn-blue-light rounded-full">CTA lichtblauw</x-links.button>
-        <x-links.button href="#" class="btn-purple-light rounded-full">CTA lichtpaars</x-links.button>
+        <x-links.button href="#" class="btn-purple-light rounded-full">CTA lichtpaars</x-links.button> --}}
+
+        <x-links.button class="btn-primary rounded-full">Primary</x-links.button>
+        <x-links.button class="btn-secondary rounded-full">Secondary</x-links.button>
+        <x-links.button class="btn-outline-1 rounded-full">Outline 1</x-links.button>
+        <x-links.button class="btn-outline-2 rounded-full">Outline 2</x-links.button>
 
         {{-- <ul class="list-none">
             <x-links.nav href="#" :active="false">Normale navigatielink</x-links.nav>
@@ -96,6 +101,11 @@
             <div>
                 <x-forms.label for="name" :value="__('Naam')" />
                 <x-forms.input id="name" type="text" name="name" required />
+            </div>
+
+            <div>
+                <x-forms.label for="company" :value="__('Bedrijf')" />
+                <x-forms.input id="company" type="text" name="company" value="Geen bedrijf" disabled />
             </div>
 
             <div>
@@ -151,7 +161,7 @@
                 </x-forms.textarea>
             </div>
 
-            <x-forms.button type="submit">{{ __('Indienen') }}</x-forms.button>
+            <x-forms.button class="btn-primary rounded-full" type="submit">{{ __('Indienen') }}</x-forms.button>
         </form>
 
         <h2 class="heading-h2" id="inputs">Andere invoervelden</h2>
@@ -274,9 +284,9 @@
         <h3 class="heading-h3" id="buttons">Knoppen</h3>
         <p>Deze knoppen zijn alleen bedoeld voor formulieren.</p>
         <div class="space-y-6">
-            <x-forms.button type="submit">Indienen</x-forms.button>
-            <x-forms.button type="reset">Resetten</x-forms.button>
-            <x-forms.button type="button">Knop</x-forms.button>
+            <x-forms.button class="btn-primary rounded-full" type="submit">Indienen</x-forms.button>
+            <x-forms.button class="btn-secondary rounded-full" type="reset">Resetten</x-forms.button>
+            <x-forms.button class="btn-primary rounded-full" type="button">Knop</x-forms.button>
         </div>
 
     </x-general-layout>

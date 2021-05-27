@@ -55,7 +55,8 @@
     @apply font-sans font-bold text-center no-underline px-4 py-3 !important;
   }
 
-  .btn-blue {
+  /* -Buttons v1- */
+  /* .btn-blue {
     @apply bg-eph-blue text-eph-blue-light !important;
   }
   .btn-blue:hover,
@@ -85,25 +86,77 @@
   .btn-purple-light:hover,
   .btn-purple-light:focus {
     @apply bg-eph-purple text-eph-purple-light !important;
+  } */
+
+  /* -Buttons v2- */
+  .btn:hover,
+  .btn:active,
+  .btn:focus {
+    @apply shadow-2xl !important;
+  }
+
+  /* Primary */
+  .btn-primary {
+    @apply bg-eph-purple text-eph-white !important;
+  }
+  .btn-primary:active {
+    @apply bg-eph-purple-darker !important;
+  }
+  .btn-primary:focus {
+    @apply bg-eph-purple-darker border border-eph-purple !important;
+  }
+
+  /* Secondary */
+  .btn-secondary {
+    @apply bg-eph-purple-light text-eph-purple !important;
+  }
+  .btn-secondary:active {
+    @apply bg-eph-purple-lighter !important;
+  }
+  .btn-secondary:focus {
+    @apply bg-eph-purple-lighter border border-eph-purple !important;
+  }
+
+  /* Outline 1 */
+  .btn-outline-1 {
+    @apply bg-eph-white text-eph-purple border border-eph-purple !important;
+  }
+  .btn-outline-1:hover {
+    @apply bg-eph-purple text-eph-white !important;
+  }
+
+  /* Outline 2 */
+  .btn-outline-2 {
+    @apply bg-eph-white text-eph-blue border border-eph-blue !important;
+  }
+  .btn-outline-2:hover {
+    @apply bg-eph-blue text-eph-white !important;
   }
 }
 
 /*  -Colors- */
-/* eph-blue #0089d0 */
-/* eph-blue-light #f2f9fc */
+/* eph-white            #ffffff */
 
-/* eph-purple #a850ff */
-/* eph-purple-light #f6edff */
+/* eph-blue             #0089d0 */
+/* eph-blue-light       #f2f9fc */
 
-/* eph-black #2c303d */
-/* eph-black-light #9fa3b6 */
+/* eph-purple-darker    #833de8  .btn-primary:active */
+/* eph-purple           #a850ff */
+/* eph-purple-lighter   #eadffc  .btn-secondary:active */
+/* eph-purple-light     #f6edff */
 
-/* eph-grey #929db1 */
-/* eph-grey-light #f3f7fa  */
+/* eph-black            #2c303d */
+/* eph-black-light      #9fa3b6 */
+
+/* eph-grey             #929db1 */
+/* eph-grey-light       #f3f7fa */
+
+/* eph-error            #ffc226 */
+/* eph-success          #2dca8c */
 
 /* -Breakpoints- */
-/* sm 640px */
-/* md 768px */
-/* lg 1024px */
-/* xl 1280px */
-/* 2xl 1536px */
+/* sm   640px */
+/* md   768px */
+/* lg   1024px */
+/* xl   1280px */
+/* 2xl  1536px */

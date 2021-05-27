@@ -23,7 +23,9 @@ module.exports = {
         light: "#f2f9fc",
       },
       "eph-purple": {
+        darker: "#833de8", /* .btn-primary:active */
         DEFAULT: "#a850ff",
+        lighter: "#eadffc", /* .btn-secondary:active */
         light: "#f6edff",
       },
       "eph-black": {
@@ -34,13 +36,18 @@ module.exports = {
         DEFAULT: "#929db1",
         light: "#f3f7fa",
       },
+      "eph-error": "#ffc226",
+      "eph-success": "#2dca8c"
     },
   },
 
   variants: {
     extend: {
       opacity: ["disabled"],
-    },
+      boxShadow: ['active'],
+      backgroundColor: ['active'],
+      borderColor: ['active']
+    }
   },
 
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
