@@ -1,0 +1,13 @@
+{
+    "editor.rulers": [
+        80,
+        120
+      ],
+    "files.insertFinalNewline": true,
+
+    // Tailwind CSS IntelliSense
+    "css.validate": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    }
+}

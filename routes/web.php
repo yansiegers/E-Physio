@@ -13,7 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// ========= General pages ======================================================
+// Route::get('/', function () {
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+// ========= General Pages ======================================================
 
 Route::get('/', function () {
     return view('pages.home');
@@ -35,11 +46,19 @@ Route::get('/blog', function () {
     return view('pages.blog');
 })->name('blog');
 
+Route::get('/algemene-voorwaarden', function () {
+    return view('pages.terms');
+})->name('terms');
+
+Route::get('/privacybeleid', function () {
+    return view('pages.privacy');
+})->name('privacy');
+
 // ========= Portal ======================================================
 
-Route::get('/dashboard', function () {
-    return view('portal.dashboard');
-})->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('portal.dashboard');
+// })->name('dashboard');
 
 Route::get('/kalender', function () {
     return view('portal.calendar');
@@ -52,3 +71,9 @@ Route::get('/oefeningen', function () {
 Route::get('/account', function () {
     return view('portal.account');
 })->name('account');
+
+// ========= Testing ======================================================
+
+Route::get('/design-kit', function () {
+    return view('pages.design-kit');
+})->name('design-kit');

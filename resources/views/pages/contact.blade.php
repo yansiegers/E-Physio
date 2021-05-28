@@ -1,7 +1,5 @@
-@extends('layouts.general', [
-  'title' => 'Contact'
-])
+@section('title', 'Contact')
 
-@section('content')
-    <h1 class="text-center">E-Physio - Contact</h1>
-@stop
+<x-general-layout>
+    <h1 class="heading-h1 text-center">E-Physio - Contact</h1>
+</x-general-layout>

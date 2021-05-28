@@ -12,14 +12,24 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * Get the meetings for the user.
+     */
+    public function meetings()
+    {
+        return $this->hasMany(Meeting::class);
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
         'email',
         'password',
+        'first_name',
+        'last_name',
+        'phone_number',
     ];
 
     /**
