@@ -1,7 +1,5 @@
-@extends('layouts.portal', [
-  'title' => 'Kalender'
-])
+@section('title', 'Kalender')
 
-@section('content')
-    <h1 class="text-center">Mijn E-Physio - Kalender</h1>
-@stop
+<x-portal-layout>
+    <h1 class="heading-h1 text-center">Mijn E-Physio - Kalender</h1>
+</x-portal-layout>
