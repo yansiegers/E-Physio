@@ -21,6 +21,7 @@
         "tailwindcss": "^2.0.2"
     },
     "dependencies": {
+        "@tailwindcss/typography": "^0.4.1",
         "stimulus": "^2.0.0"
     }
 }

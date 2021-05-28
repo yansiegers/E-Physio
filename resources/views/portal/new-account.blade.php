@@ -1,7 +1,6 @@
-@extends('layouts.portal', [
-  'title' => 'Nieuw account'
-])
+@section('title', 'Nieuw account')
 
-@section('content')
-    <h1 class="text-center">Mijn E-Physio - Nieuw account</h1>
-@stop
+<x-portal-layout>
+    <h1 class="heading-h1 text-center">Mijn E-Physio - Nieuw account</h1>
+</x-portal-layout>
+
