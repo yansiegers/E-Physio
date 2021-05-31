@@ -3,7 +3,24 @@
     <x-onboarding-layout>
         <h1 class="heading-h1 text-center">4. Bevestiging van je afspraak</h1>
 
-        <form action="/" class="grid grid-cols-2">
+        {{-- resources\views\components\auth-validation-errors.blade.php --}}
+        @if ($errors->any())
+            <div>
+                <div class="font-medium text-red-600">
+                    {{ __('Whoops! Something went wrong.') }}
+                </div>
+
+                <ul class="mt-3 list-disc list-inside text-sm text-red-600">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{ route('portal.clients.onboarding.submit') }}" method="POST" class="grid grid-cols-2">
+            {{ csrf_field() }}
+
             <x-forms.input type="hidden" name="physician" :value="!empty($_GET['physician']) ? $_GET['physician'] : ''" />
             <x-forms.input type="hidden" name="timeslot" :value="!empty($_GET['timeslot']) ? $_GET['timeslot'] : ''" />
 
@@ -24,9 +41,13 @@
                             placeholder="e-mail@voorbeeld.nl" required />
                     </div>
                     <div>
-                        <x-forms.label for="tel" value="Telefoonnummer" />
-                        <x-forms.input id="tel" type="tel" placeholder="0612345678" required />
+                        <x-forms.label for="phone" value="Telefoonnummer" />
+                        <x-forms.input id="phone" type="tel" placeholder="0612345678" required />
                     </div>
+                    {{-- <div>
+                        <x-forms.label for="password" value="Wachtwoord" />
+                        <x-forms.input id="password" type="password" placeholder="Verzin een wachtwoord" />
+                    </div> --}}
                 </div>
 
                 <h2 class="heading-h2">02 Betalingsmethode</h2>

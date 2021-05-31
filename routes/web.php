@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientOnboardingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,9 +69,16 @@ Route::get('/fyiotherapeuten', function () {
     return view('portal.clients.onboarding.choices');
 })->name('portal.clients.onboarding.choices');
 
-Route::get('/bevestiging', function () {
-    return view('portal.clients.onboarding.confirmation');
-})->name('portal.clients.onboarding.confirmation');
+// Route::get('/bevestiging', function () {
+//     return view('portal.clients.onboarding.confirmation');
+// })->name('portal.clients.onboarding.confirmation');
+Route::get(
+    '/bevestiging', [ClientOnboardingController::class, 'create']
+)->name('portal.clients.onboarding.confirmation');
+
+Route::post(
+    '/verzenden', [ClientOnboardingController::class, 'store']
+)->name('portal.clients.onboarding.submit');
 
 
 // Route::get('/dashboard', function () {
