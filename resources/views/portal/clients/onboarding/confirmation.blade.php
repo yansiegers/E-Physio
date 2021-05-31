@@ -21,7 +21,8 @@
         <form action="{{ route('portal.clients.onboarding.submit') }}" method="POST" class="grid grid-cols-2">
             {{ csrf_field() }}
 
-            <x-forms.input type="hidden" name="physician" :value="!empty($_GET['physician']) ? $_GET['physician'] : ''" />
+            <x-forms.input type="hidden" name="physician_id"
+                :value="!empty($_GET['physician_id']) ? $_GET['physician_id'] : ''" />
             <x-forms.input type="hidden" name="timeslot" :value="!empty($_GET['timeslot']) ? $_GET['timeslot'] : ''" />
 
             <div>
@@ -29,11 +30,12 @@
                 <div class="space-y-6">
                     <div>
                         <x-forms.label for="first_name" value="Voornaam*" />
-                        <x-forms.input id="first_name" type="text" name="first_name" required autofocus />
+                        <x-forms.input id="first_name" type="text" name="first_name" :value="old('first_name')" required
+                            autofocus />
                     </div>
                     <div>
                         <x-forms.label for="last_name" value="Achternaam*" />
-                        <x-forms.input id="last_name" type="text" name="last_name" required />
+                        <x-forms.input id="last_name" type="text" name="last_name" :value="old('last_name')" required />
                     </div>
                     <div>
                         <x-forms.label for="email" value="E-mailadres*" />
@@ -41,13 +43,19 @@
                             placeholder="e-mail@voorbeeld.nl" required />
                     </div>
                     <div>
-                        <x-forms.label for="phone" value="Telefoonnummer" />
-                        <x-forms.input id="phone" type="tel" placeholder="0612345678" required />
+                        <x-forms.label for="phone_number" value="Telefoonnummer" />
+                        <x-forms.input id="phone_number" type="tel" name="phone_number" placeholder="0612345678" />
                     </div>
-                    {{-- <div>
-                        <x-forms.label for="password" value="Wachtwoord" />
-                        <x-forms.input id="password" type="password" placeholder="Verzin een wachtwoord" />
-                    </div> --}}
+                    <div>
+                        <x-forms.label for="password" value="Wachtwoord*" />
+                        <x-forms.input id="password" type="password" name="password" placeholder="Verzin een wachtwoord"
+                            required autocomplete="new-password" />
+                    </div>
+                    <div>
+                        <x-forms.label for="password_confirmation" value="Wachtwoord (opnieuw)*" />
+                        <x-forms.input id="password_confirmation" type="password" name="password_confirmation"
+                            placeholder="Typ nog eens" required />
+                    </div>
                 </div>
 
                 <h2 class="heading-h2">02 Betalingsmethode</h2>
@@ -73,10 +81,13 @@
                             '4' => 'Marlies van Veen',
                             '5' => 'Peter de Vries',
                             '6' => 'Marleen de Jong',
-                            '7' => 'Jeroen de Jong'
+                            '7' => 'Jeroen de Jong',
                         ];
                     @endphp
-                    <h3 class="heading-h3">@if (!empty($_GET['physician'])){{ $physicians[$_GET['physician']] }}@endif</h3>
+                    <h3 class="heading-h3">
+                        @if (!empty($_GET['physician_id']))
+                            {{ $physicians[$_GET['physician_id']] }}@endif
+                    </h3>
                     <div>Rugspecialist</div>
                     <div>⭐⭐⭐⭐</div>
                     <div>
@@ -87,11 +98,17 @@
                 <div>
                     <div>
                         <div>Datum en tijd</div>
-                        <div>Vrijdag 2 juni, @if (!empty($_GET['timeslot'])){{ $_GET['timeslot'] }}@endif</div>
+                        {{-- <div>{{ Carbon\Carbon::now()->addDays(5)->setHour('13')->setMinute('0')->setSecond('0') }}</div> --}}
+                        <div>Vrijdag 2 juni, @if (!empty($_GET['timeslot']))
+                                {{ $_GET['timeslot'] }}@endif
+                        </div>
                     </div>
                     <div>
                         <div>Klacht</div>
-                        <div>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</div>
+                        <div>
+                            @if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}
+                            @endif
+                        </div>
                     </div>
                     <div>Totaal: €29,99</div>
                     <x-forms.button class="btn-primary rounded-full" type="submit">Afrekenen</x-forms.button>
@@ -99,8 +116,10 @@
             </div>
 
             <div>
-                <x-links.button href="{{ route('portal.clients.onboarding.choices') }}" class="btn-outline-1 rounded-full">Stap 3</x-links.button>
-                <x-links.button href="{{ route('portal.clients.onboarding.symptoms') }}" class="btn-outline-2 rounded-full">Stap 1</x-links.button>
+                <x-links.button href="{{ route('portal.clients.onboarding.step3') }}" class="btn-outline-1 rounded-full">
+                    Stap 3</x-links.button>
+                <x-links.button href="{{ route('portal.clients.onboarding.step1') }}" class="btn-outline-2 rounded-full">
+                    Stap 1</x-links.button>
             </div>
         </form>
     </x-onboarding-layout>

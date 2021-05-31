@@ -6,7 +6,7 @@
         <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p>
         <p>@if (!empty($_GET['timeslot'])){{ $_GET['timeslot'] }}@endif</p>
 
-        <form action="{{ route('portal.clients.onboarding.confirmation') }}" class="space-y-6">
+        <form action="{{ route('portal.clients.onboarding.step4') }}" class="space-y-6">
             <x-forms.input type="hidden" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom'] : ''" />
             <x-forms.input type="hidden" name="timeslot" :value="!empty($_GET['timeslot']) ? $_GET['timeslot'] : ''" />
 
@@ -24,14 +24,14 @@
                     ];
                 @endphp
                 {{-- <x-forms.label value="Welke fysiotherapeut past bij jou?" /> --}}
-                <x-forms.radio name="physician" :list="$physicians" value="" />
+                <x-forms.radio name="physician_id" :list="$physicians" value="" />
             </div>
 
             <x-forms.button class="btn-primary rounded-full" type="submit">Volgende</x-forms.button>
 
             <div>
-                <x-links.button href="{{ route('portal.clients.onboarding.planner') }}" class="btn-outline-1 rounded-full">Stap 2</x-links.button>
-                <x-links.button href="{{ route('portal.clients.onboarding.confirmation') }}" class="btn-outline-2 rounded-full">Stap 4</x-links.button>
+                <x-links.button href="{{ route('portal.clients.onboarding.step2') }}" class="btn-outline-1 rounded-full">Stap 2</x-links.button>
+                <x-links.button href="{{ route('portal.clients.onboarding.step4') }}" class="btn-outline-2 rounded-full">Stap 4</x-links.button>
             </div>
         </form>
     </x-onboarding-layout>

@@ -3,7 +3,7 @@
     <x-onboarding-layout>
         <h1 class="heading-h1 text-center">1. Wat is je klacht?</h1>
 
-        <form action="{{ route('portal.clients.onboarding.planner') }}" method="GET" class="space-y-6">
+        <form action="{{ route('portal.clients.onboarding.step2') }}" method="GET" class="space-y-6">
             <div>
                 @php
                     $symptoms = [
@@ -32,8 +32,8 @@
             <x-forms.button class="btn-primary rounded-full" type="submit">Volgende</x-forms.button>
 
             <div>
-                <x-links.button href="{{ route('portal.clients.onboarding.confirmation') }}" class="btn-outline-2 rounded-full">Stap 4</x-links.button>
-                <x-links.button href="{{ route('portal.clients.onboarding.planner') }}" class="btn-outline-2 rounded-full">Stap 2</x-links.button>
+                <x-links.button href="{{ route('portal.clients.onboarding.step4') }}" class="btn-outline-2 rounded-full">Stap 4</x-links.button>
+                <x-links.button href="{{ route('portal.clients.onboarding.step2') }}" class="btn-outline-2 rounded-full">Stap 2</x-links.button>
             </div>
         </form>
     </x-onboarding-layout>

@@ -5,7 +5,7 @@
 
         <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p>
 
-        <form action="{{ route('portal.clients.onboarding.choices') }}" method="GET" class="space-y-6">
+        <form action="{{ route('portal.clients.onboarding.step3') }}" method="GET" class="space-y-6">
             <x-forms.input type="hidden" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom'] : ''" />
 
             <div>
@@ -29,9 +29,9 @@
             <x-forms.button class="btn-primary rounded-full" type="submit">Volgende</x-forms.button>
 
             <div>
-                <x-links.button href="{{ route('portal.clients.onboarding.symptoms') }}"
+                <x-links.button href="{{ route('portal.clients.onboarding.step1') }}"
                     class="btn-outline-1 rounded-full">Stap 1</x-links.button>
-                <x-links.button href="{{ route('portal.clients.onboarding.choices') }}"
+                <x-links.button href="{{ route('portal.clients.onboarding.step3') }}"
                     class="btn-outline-2 rounded-full">Stap 3</x-links.button>
             </div>
         </form>

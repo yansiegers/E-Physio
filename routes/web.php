@@ -59,22 +59,19 @@ Route::get('/privacybeleid', function () {
 
 Route::get('/klachten', function () {
     return view('portal.clients.onboarding.symptoms');
-})->name('portal.clients.onboarding.symptoms');
+})->name('portal.clients.onboarding.step1');
 
 Route::get('/afspraak-maken', function () {
     return view('portal.clients.onboarding.planner');
-})->name('portal.clients.onboarding.planner');
+})->name('portal.clients.onboarding.step2');
 
 Route::get('/fyiotherapeuten', function () {
     return view('portal.clients.onboarding.choices');
-})->name('portal.clients.onboarding.choices');
+})->name('portal.clients.onboarding.step3');
 
-// Route::get('/bevestiging', function () {
-//     return view('portal.clients.onboarding.confirmation');
-// })->name('portal.clients.onboarding.confirmation');
 Route::get(
     '/bevestiging', [ClientOnboardingController::class, 'create']
-)->name('portal.clients.onboarding.confirmation');
+)->name('portal.clients.onboarding.step4');
 
 Route::post(
     '/verzenden', [ClientOnboardingController::class, 'store']
