@@ -23,7 +23,7 @@
     <hr> --}}
 
     <!-- Page Content -->
-    <main>
+    <main class="container mx-auto p-5 bg-eph-purple-light">
         {{ $slot }}
     </main>
 </body>

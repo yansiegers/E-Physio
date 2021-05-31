@@ -56,6 +56,23 @@ Route::get('/privacybeleid', function () {
 
 // ========= Portal ======================================================
 
+Route::get('/klachten', function () {
+    return view('portal.clients.onboarding.symptoms');
+})->name('portal.clients.onboarding.symptoms');
+
+Route::get('/afspraak-maken', function () {
+    return view('portal.clients.onboarding.planner');
+})->name('portal.clients.onboarding.planner');
+
+Route::get('/fyiotherapeuten', function () {
+    return view('portal.clients.onboarding.choices');
+})->name('portal.clients.onboarding.choices');
+
+Route::get('/bevestiging', function () {
+    return view('portal.clients.onboarding.confirmation');
+})->name('portal.clients.onboarding.confirmation');
+
+
 // Route::get('/dashboard', function () {
 //     return view('portal.dashboard');
 // })->name('dashboard');
