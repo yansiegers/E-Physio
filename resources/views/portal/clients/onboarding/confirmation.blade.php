@@ -4,6 +4,9 @@
         <h1 class="heading-h1 text-center">4. Bevestiging van je afspraak</h1>
 
         <form action="/" class="grid grid-cols-2">
+            <x-forms.input type="hidden" name="physician" :value="!empty($_GET['physician']) ? $_GET['physician'] : ''" />
+            <x-forms.input type="hidden" name="timeslot" :value="!empty($_GET['timeslot']) ? $_GET['timeslot'] : ''" />
+
             <div>
                 <h2 class="heading-h2">01 Persoonlijke gegevens</h2>
                 <div class="space-y-6">
@@ -40,7 +43,19 @@
                 <h2 class="heading-h2">Bestelling</h2>
                 <span>E-consult</span>
                 <div>
-                    <h3 class="heading-h3">Harry Tipker</h3>
+                    @php
+                        $physicians = [
+                            '0' => 'Harry Tipker',
+                            '1' => 'Jan Jansen',
+                            '2' => 'Hester Ragas',
+                            '3' => 'Sam Hoogland',
+                            '4' => 'Marlies van Veen',
+                            '5' => 'Peter de Vries',
+                            '6' => 'Marleen de Jong',
+                            '7' => 'Jeroen de Jong'
+                        ];
+                    @endphp
+                    <h3 class="heading-h3">@if (!empty($_GET['physician'])){{ $physicians[$_GET['physician']] }}@endif</h3>
                     <div>Rugspecialist</div>
                     <div>⭐⭐⭐⭐</div>
                     <div>
@@ -51,11 +66,11 @@
                 <div>
                     <div>
                         <div>Datum en tijd</div>
-                        <div>Vrijdag 2 juni, 15:00 - 16:00</div>
+                        <div>Vrijdag 2 juni, @if (!empty($_GET['timeslot'])){{ $_GET['timeslot'] }}@endif</div>
                     </div>
                     <div>
                         <div>Klacht</div>
-                        <div>Rug</div>
+                        <div>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</div>
                     </div>
                     <div>Totaal: €29,99</div>
                     <x-forms.button class="btn-primary rounded-full" type="submit">Afrekenen</x-forms.button>

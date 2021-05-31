@@ -3,7 +3,7 @@
     <x-onboarding-layout>
         <h1 class="heading-h1 text-center">1. Wat is je klacht?</h1>
 
-        <form action="/" class="space-y-6">
+        <form action="{{ route('portal.clients.onboarding.planner') }}" method="GET" class="space-y-6">
             <div>
                 @php
                     $symptoms = [
@@ -26,7 +26,7 @@
                     ];
                 @endphp
                 {{-- <x-forms.label for="symptom" value="Wat is je klacht?*" /> --}}
-                <x-forms.select id="symptom" name="symptom" value="" :list="$symptoms" />
+                <x-forms.select id="symptom" name="symptom" value="" :list="$symptoms" required />
             </div>
 
             <x-forms.button class="btn-primary rounded-full" type="submit">Volgende</x-forms.button>

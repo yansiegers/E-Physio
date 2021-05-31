@@ -3,18 +3,24 @@
     <x-onboarding-layout>
         <h1 class="heading-h1 text-center">3. Kies jouw fysiotherapeut</h1>
 
-        <form action="/" class="space-y-6">
+        <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p>
+        <p>@if (!empty($_GET['timeslot'])){{ $_GET['timeslot'] }}@endif</p>
+
+        <form action="{{ route('portal.clients.onboarding.confirmation') }}" class="space-y-6">
+            <x-forms.input type="hidden" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom'] : ''" />
+            <x-forms.input type="hidden" name="timeslot" :value="!empty($_GET['timeslot']) ? $_GET['timeslot'] : ''" />
+
             <div>
                 @php
                     $physicians = [
-                        'Harry Tipker',
-                        'Jan Jansen',
-                        'Hester Ragas',
-                        'Sam Hoogland',
-                        'Marlies van Veen',
-                        'Peter de Vries',
-                        'Marleen de Jong',
-                        'Jeroen de Jong'
+                        '0' => 'Harry Tipker',
+                        '1' => 'Jan Jansen',
+                        '2' => 'Hester Ragas',
+                        '3' => 'Sam Hoogland',
+                        '4' => 'Marlies van Veen',
+                        '5' => 'Peter de Vries',
+                        '6' => 'Marleen de Jong',
+                        '7' => 'Jeroen de Jong'
                     ];
                 @endphp
                 {{-- <x-forms.label value="Welke fysiotherapeut past bij jou?" /> --}}
