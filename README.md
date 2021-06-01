@@ -1,10 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p style="display: flex; justify-content: space-around; align-items: center;">
+    <a href="https://e-physio.org/" target="_blank">
+        <img src="https://raw.githubusercontent.com/yansiegers/E-Physio/main/public/img/logo.png" 
+        alt="Logo e-physio" height="75">
+    </a>
+    <a href="">
+        <img src="https://raw.githubusercontent.com/yansiegers/E-Physio/main/public/img/NHL-Stenden-PNG.png" alt="Logo NHL Stenden" height="100">
+    </a>
+    <a href="">
+        <img src="https://raw.githubusercontent.com/yansiegers/E-Physio/main/public/img/The-Next-Web.gif" alt="Logo The Next Web" height="100">
+    </a> 
+</p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://github.com/yansiegers/E-Physio/branches">
+        <img src="https://img.shields.io/github/last-commit/yansiegers/E-Physio" alt="Last commit">
+    </a>
+    <a href="https://laravel.com/docs/8.x">
+        <img src="https://img.shields.io/badge/Laravel-v8.x-important" alt="Laravel framework version">
+    </a>
+    <a href="https://laravel.com/docs/8.x">
+        <img src="https://img.shields.io/badge/Tailwind-v2.x-important" alt="Tailwind framework version">
+    </a>
+    <a href="https://nhlstenden.com/">
+        <img src="https://img.shields.io/badge/university-NHL%20Stenden-blue" alt="Laravel framework version">
+    </a>
+    <a href="https://nhlstenden.com/">
+        <img src="https://img.shields.io/badge/minor-The%20Next%20Web-red" alt="Laravel framework version">
+    </a>
 </p>
 
 ## About Laravel
