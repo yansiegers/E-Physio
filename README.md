@@ -58,12 +58,32 @@
 #### Others
 
 ### How to install this project
+This project uses Docker and Laravel Sail to run. Laravel itself and it's (references to) packages such as Tailwind are already included within the project.
 
 #### Prerequisites
+Installed in general:
+* [Composer](https://getcomposer.org/doc/00-intro.md)
+* [PHP](https://www.php.net/downloads.php)
 
-#### Installing Laravel with Composer
+Recommended installations for Windows
+* [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)
+* [Ubuntu on WSL](https://ubuntu.com/wsl)
 
-#### Installing Docker for Windows
+#### Installing Docker
+1. [Download Docker](https://www.docker.com/products/docker-desktop)
+2. Follow the installation guide
+   1. [Windows](https://docs.docker.com/docker-for-windows/install/)
+   2. [Mac](https://docs.docker.com/docker-for-mac/install/)
+
+Docker requires for Windows:
+* [*Hyper-V* or *WSL 2* to be enabled](https://docs.docker.com/docker-for-windows/install/#system-requirements)
+* [Virtualization to be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled)
+
+#### Installing Laravel Sail
+1. Follow the installation guide on Laraval Sail: [Installing Sail Into Existing Applications](https://laravel.com/docs/8.x/sail#installation)
+2. Optionally, you can [configure a Bash alias](https://laravel.com/docs/8.x/sail#configuring-a-bash-alias)
+
+You can find more on installing Laravel [here](https://laravel.com/docs/8.x/installation).
 
 ### How to use this project
 
