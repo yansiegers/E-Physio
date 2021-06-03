@@ -32,11 +32,16 @@
     </a>
 </p>
 
-## The project
+### About e-physio and the assignment
+Two physiotherapists have started their own website to offer online physiotherapy for people that need therapy and mainly work at home. The [current website](https://e-physio.org/) is built in Wordpress and suits the needs for them right now, but the website isn't ready for their future plans. That is why they came to the minor The Next Web with a assignment: build a platform for health seekers who would like to have online therapy. This assignment raised questions as "how can we attract people to the services of e-physio?" and "what is the best way to guide people through the process of making an appointment?"
 
-### About e-physio
+#### The study and this project
+This project is being done by four students of the study Communication & Multimedia Design (CMD) within the minor The Next Web from NHL Stenden, university of applied sciences.
+
+CMD is an study that uses [Design Based Education](https://www.nhlstenden.com/en/why-nhl-stenden/education-concept). It also offers the method [Design Thinking](https://en.wikipedia.org/wiki/Design_thinking) to structure the projects. Within the minor The Next Web, we use [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) for the development of the product. When combined, the Scrum sprints feature the five phases of Design Thinking.
 
 ### Objectives
+The main objective from the two clients is as follows: develop a proof-of-concept in the form such as a roadmap, app, or website that support eachother.
 
 ### This repository
 
