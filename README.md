@@ -19,13 +19,16 @@
         <img src="https://img.shields.io/github/last-commit/yansiegers/E-Physio" alt="Last commit">
     </a>
     <a href="https://laravel.com/docs/8.x">
-        <img src="https://img.shields.io/badge/Laravel-v8.x-important" alt="Laravel framework version">
+        <img src="https://img.shields.io/badge/Laravel-v8.x-important" alt="Laravel v8.x">
     </a>
     <a href="https://tailwindcss.com/docs">
-        <img src="https://img.shields.io/badge/Tailwind-v2.x-important" alt="Tailwind framework version">
+        <img src="https://img.shields.io/badge/Tailwind-v2.x-important" alt="Tailwind v2.x">
     </a>
     <a href="https://nhlstenden.com/">
         <img src="https://img.shields.io/badge/university-NHL%20Stenden-blue" alt="University: NHL Stenden">
+    </a>
+    <a href="https://cmd-leeuwarden.nl/">
+        <img src="https://img.shields.io/badge/study-CMD-yellow" alt="Study: CMD">
     </a>
     <a href="https://www.nhlstenden.com/en/minors/next-web">
         <img src="https://img.shields.io/badge/minor-The%20Next%20Web-red" alt="Minor: The Next Web">
@@ -97,7 +100,7 @@ You can find more on installing Laravel [here](https://laravel.com/docs/8.x/inst
 #### Generating CSS with Tailwind
 
 ## Credits and copyright
-This project is done by four studends of NHL Stenden, within the minor The Next Web. School year 2020/2021, second semester.
+This project is done by four students of NHL Stenden, within the minor The Next Web. School year 2020/2021, second semester.
 
 ### Contact details
 For any questions about the project you can send the [owner of this repository](https://github.com/yansiegers) an email. The full contact details of all team members can be found in the documentation of the project.
