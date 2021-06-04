@@ -47,10 +47,75 @@ CMD is an study that uses [Design Based Education](https://www.nhlstenden.com/en
 The main objective from the two clients is as follows: develop a proof-of-concept in the form such as a roadmap, app, or website that support eachother.
 
 ### This repository
+This repository contains all the code that was developed during the project. 
 
 #### Features
+Per part of the application is noted what feature is included in this repository and what feature is not. The emojis tell you what feature is included and what each feature is.
 
-#### To be added
+There are three parts of the application:
+1. General pages
+2. The client portal
+3. The physician portal
+
+**Legend**
+
+🏗️ Lay-out:
+* Framework for each page
+* Metadata of each page
+* Navigation bar
+* Footer
+
+📄 Page:
+* Contents of the page
+* Markup and styling
+* Illustrations and animations
+
+⚙️ Controller:
+* Sends and receives data fom database
+* Takes care of the pages
+
+1: General pages | Included?
+--- | ---
+🏗️ Lay-out general | ✅
+📄 Home page | ✅
+📄 Contact page | ✅
+📄 About page | ✅
+📄 FAQ page | ❌
+📄 Blog page | ❌
+⚙️ Blog posts controller | ❌
+
+2: Client portal | Included?
+--- | ---
+🏗️ Lay-out onboarding (clients) | ✅
+📄 Symptoms page | ✅
+📄 Planner page | ✅
+📄 Choices page | ✅
+📄 Confirmation page | ✅
+⚙️ Onboarding controller | ✅
+🏗️ Lay-out portal (clients) | ❌
+📄 Calendar page (clients) | ❌
+⚙️ Calendar controller (clients) | ❌
+🏗️ Lay-out account (clients) | ❌
+📄 Log-in page | ✅
+⚙️ Log-in controller | ✅
+
+3: Physician portal | Included?
+--- | ---
+🏗️ Lay-out onboarding (physicians) | ❌
+📄 Registration page | ❌
+⚙️ Registration controller | ❌
+📄 Physician page | ❌
+⚙️ Physician controller | ❌
+🏗️ Lay-out portal (physicians) | ❌
+📄 Profile page | ❌
+⚙️ Profile controller | ❌
+📄 Work week page | ❌
+⚙️ Work week controller | ❌
+📄 Calendar page (physicians) | ❌
+⚙️ Calendar controller (physicians) | ❌
+🏗️ Lay-out account (physicians) | ❌
+📄 Log-in page | ✅
+⚙️ Log-in controller | ✅
 
 ## Technical details
 
