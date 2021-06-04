@@ -35,6 +35,29 @@
     </a>
 </p>
 
+**Table of contents**
+- [The e-physio project](#the-e-physio-project)
+  - [About e-physio and the assignment](#about-e-physio-and-the-assignment)
+    - [The study and this project](#the-study-and-this-project)
+  - [Objectives](#objectives)
+  - [This repository](#this-repository)
+    - [Features](#features)
+- [Technical details](#technical-details)
+  - [Cloning and forking](#cloning-and-forking)
+  - [Packages and depenencies](#packages-and-depenencies)
+    - [PHP packages](#php-packages)
+    - [NPM packages](#npm-packages)
+  - [How to install this project](#how-to-install-this-project)
+    - [Prerequisites](#prerequisites)
+    - [Installing Docker](#installing-docker)
+    - [Installing Laravel Sail](#installing-laravel-sail)
+  - [How to use this project](#how-to-use-this-project)
+- [Credits and copyright](#credits-and-copyright)
+  - [Contact details](#contact-details)
+  - [Terms and conditions](#terms-and-conditions)
+  - [Laravel license](#laravel-license)
+
+## The e-physio project
 ### About e-physio and the assignment
 Two physiotherapists have started their own website to offer online physiotherapy for people that need therapy and mainly work at home. The [current website](https://e-physio.org/) is built in Wordpress and suits the needs for them right now, but the website isn't ready for their future plans. That is why they came to the minor The Next Web with a assignment: build a platform for health seekers who would like to have online therapy. This assignment raised questions as "how can we attract people to the services of e-physio?" and "what is the best way to guide people through the process of making an appointment?"
 
