@@ -121,17 +121,46 @@ There are three parts of the application:
 
 ### Cloning and forking
 
-### Depenencies and packages
+### Packages and depenencies
+There are PHP packages and NPM packages in this project. The details of all these packages are down below.
 
-#### Laravel
-> Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects (...). Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### PHP packages
+All PHP packages and their versions can be found in [`composer.json`](composer.json). These packages are managed by [Composer](https://getcomposer.org/).
 
-#### Tailwind
+Package | Description | Used?
+--- | --- | ---
+[PHP](https://www.php.net/) | PHP is a popular general-purpose scripting language that is especially suited to web development. | ✔️
+[Laravel Framework](https://github.com/laravel/framework) | A web application framework. | ✔️
+[Laravel Sail](https://github.com/laravel/sail) | Docker files for running a basic Laravel application. | ✔️
+[Laravel Tinker](https://github.com/laravel/tinker) |  Powerful REPL for the Laravel framework. | ✔️
+[Laravel Cors](https://github.com/fruitcake/laravel-cors) | Adds CORS (Cross-Origin Resource Sharing) headers support in the Laravel application.  | ✔️
+[Laravel Breeze](https://github.com/laravel/breeze) | Minimal Laravel authentication scaffolding with Blade and Tailwind. | ✔️
+[Faker](https://github.com/fzaninotto/Faker) | Faker is a PHP library that generates fake data. | ✔️
+fideloper/proxy |  | ❌
+guzzlehttp/guzzle |  | ❌
+facade/ignition |  | ❌
+mockery/mockery |  | ❌
+nunomaduro/collision |  | ❌
+phpunit/phpunit |  | ❌
 
-#### Others
+#### NPM packages
+All NPM packages and their versions can be found in [`package.json`](package.json). These packages are managed by [Node Package Manager](https://www.npmjs.com/).
+
+Package | Description | Used?
+--- | --- | ---
+[Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) | A utility-first CSS framework for rapid UI development.  | ✔️
+[Tailwind CSS / forms](https://github.com/tailwindlabs/tailwindcss-forms) | A plugin that provides a basic reset for form styles. | ✔️
+[Tailwind CSS / typography](https://github.com/tailwindlabs/tailwindcss-typography) | Adds typographic defaults to any vanilla HTML. | ✔️
+[PostCSS](https://github.com/postcss/postcss) | A tool for transforming styles with JavaScript plugins. | ✔️
+[Autoprefixer](https://github.com/postcss/autoprefixer) | A plugin to parse CSS. | ✔️
+[Laravel Mix](https://github.com/JeffreyWay/laravel-mix) | Compiling CSS and JavaScript assets. | ✔️
+[Alpine.js](https://github.com/alpinejs/alpine) |  | ❌
+[Axios](https://github.com/axios/axios) |  | ❌
+[Lodash](https://github.com/lodash/lodash) |  | ❌
+[Stimulus](https://github.com/hotwired/stimulus) | A JavaScript framework. | ❌
 
 ### How to install this project
-This project uses Docker and Laravel Sail to run. Laravel itself and it's (references to) packages such as Tailwind are already included within the project.
+This project uses [Docker](https://www.docker.com/) and [Laravel Sail](https://laravel.com/docs/8.x/sail) to run. [Laravel](https://laravel.com/) itself and it's (references to) packages such as [Tailwind](https://tailwindcss.com/) are already included within the project.
 
 #### Prerequisites
 Installed in general:
