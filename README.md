@@ -120,6 +120,7 @@ There are three parts of the application:
 ## Technical details
 
 ### Cloning and forking
+When this project is completed, is is possible to clone or fork this project to get a copy of the project. You can find more about [cloning](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) and [forking](https://docs.github.com/en/github/getting-started-with-github/quickstart/fork-a-repo) on the GitHub Docs.
 
 ### Packages and depenencies
 There are PHP packages and NPM packages in this project. The details of all these packages are down below.
@@ -188,10 +189,15 @@ Docker requires for Windows:
 You can find more on installing Laravel [here](https://laravel.com/docs/8.x/installation).
 
 ### How to use this project
+There are a few commands to get going with this project. Normally the `php` command is used, but this gets replaced by the `sail` command. Compling the assets such as the CSS from Tailwind happens with [Laravel Mix](https://laravel.com/docs/8.x/mix/).
 
-#### Getting the project running
-
-#### Generating CSS with Tailwind
+Command | Description
+--- | ---
+`sail up` | Start the application's containers
+`sail artisan tinker` | Start the command line for the Laravel application
+`npm run dev` | Run all Mix tasks
+`npm run watch` | Run all Mix tasks on file change
+`npm run prod` | Run all Mix tasks and minify output
 
 ## Credits and copyright
 This project is done by four students of NHL Stenden, within the minor The Next Web. School year 2020/2021, second semester.
