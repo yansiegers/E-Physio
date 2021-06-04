@@ -70,7 +70,7 @@ CMD is an study that uses [Design Based Education](https://www.nhlstenden.com/en
 The main objective from the two clients is as follows: develop a proof-of-concept in the form such as a roadmap, app, or website that support eachother.
 
 ### This repository
-This repository contains all the code that was developed during the project. 
+This repository contains all the code that was developed during the project. The used workflow for this Git repository is [Git Flow](https://www.gitkraken.com/learn/git/git-flow). All branches can be found [here](https://github.com/yansiegers/E-Physio/branches).
 
 #### Features
 Per part of the application is noted what feature is included in this repository and what feature is not. The emojis tell you what feature is included and what each feature is.
