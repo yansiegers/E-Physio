@@ -11,19 +11,19 @@
             <div>
                 @php
                     $timeslots = [
-                        '08:00-09:00' => '08:00 t/m 09:00',
-                        '09:00-10:00' => '09:00 t/m 10:00',
-                        '10:00-11:00' => '10:00 t/m 11:00',
-                        '11:00-12:00' => '11:00 t/m 12:00',
-                        // '12:00-13:00' => '12:00 t/m 13:00',
-                        '13:00-14:00' => '13:00 t/m 14:00',
-                        '14:00-15:00' => '14:00 t/m 15:00',
-                        '15:00-16:00' => '15:00 t/m 16:00',
-                        '16:00-17:00' => '16:00 t/m 17:00',
+                        '8' => '08:00 t/m 09:00',
+                        '9' => '09:00 t/m 10:00',
+                        '10' => '10:00 t/m 11:00',
+                        '11' => '11:00 t/m 12:00',
+                        // '12' => '12:00 t/m 13:00',
+                        '13' => '13:00 t/m 14:00',
+                        '14' => '14:00 t/m 15:00',
+                        '15' => '15:00 t/m 16:00',
+                        '16' => '16:00 t/m 17:00',
                     ];
                 @endphp
                 {{-- <x-forms.label value="Wanneer ben je beschikbaar?" /> --}}
-                <x-forms.radio name="timeslot" :list="$timeslots" value="08:00-09:00" required />
+                <x-forms.radio name="start_hour" :list="$timeslots" value="8" required />
             </div>
 
             <x-forms.button class="btn-primary rounded-full" type="submit">Volgende</x-forms.button>

@@ -23,7 +23,7 @@
 
             <x-forms.input type="hidden" name="physician_id"
                 :value="!empty($_GET['physician_id']) ? $_GET['physician_id'] : ''" />
-            <x-forms.input type="hidden" name="timeslot" :value="!empty($_GET['timeslot']) ? $_GET['timeslot'] : ''" />
+            <x-forms.input type="hidden" name="start_hour" :value="!empty($_GET['start_hour']) ? $_GET['start_hour'] : ''" />
 
             <div>
                 <h2 class="heading-h2">01 Persoonlijke gegevens</h2>
@@ -98,10 +98,13 @@
                 <div>
                     <div>
                         <div>Datum en tijd</div>
-                        {{-- <div>{{ Carbon\Carbon::now()->addDays(5)->setHour('13')->setMinute('0')->setSecond('0') }}</div> --}}
-                        <div>Vrijdag 2 juni, @if (!empty($_GET['timeslot']))
-                                {{ $_GET['timeslot'] }}@endif
-                        </div>
+                        @php
+                            $start_date = '12-30-2021';
+                            $start_hour = !empty($_GET['start_hour']) ? $_GET['start_hour'] : '';
+                            $start_date = Carbon\Carbon::createFromFormat('m-d-Y H:i:s', $start_date . ' 00:00:00');
+                            $start_date_time = $start_date->setHour($start_hour)
+                        @endphp
+                        <div>{{ ucfirst($start_date_time->locale('nl')->translatedFormat('l j F \o\m H:i')) }}</div>
                     </div>
                     <div>
                         <div>Klacht</div>

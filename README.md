@@ -160,6 +160,7 @@ Package | Description | Used?
 [Laravel Cors](https://github.com/fruitcake/laravel-cors) | Adds CORS (Cross-Origin Resource Sharing) headers support in the Laravel application.  | ✔️
 [Laravel Breeze](https://github.com/laravel/breeze) | Minimal Laravel authentication scaffolding with Blade and Tailwind. | ✔️
 [Faker](https://github.com/fzaninotto/Faker) | Faker is a PHP library that generates fake data. | ✔️
+[Carbon](https://github.com/briannesbitt/carbon) | An international PHP extension for DateTime. | ✔️
 fideloper/proxy |  | ❌
 guzzlehttp/guzzle |  | ❌
 facade/ignition |  | ❌
