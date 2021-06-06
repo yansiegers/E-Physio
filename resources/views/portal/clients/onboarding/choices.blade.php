@@ -3,12 +3,14 @@
     <x-onboarding-layout>
         <h1 class="heading-h1 text-center">3. Kies jouw fysiotherapeut</h1>
 
-        <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p>
-        <p>@if (!empty($_GET['start_hour'])){{ $_GET['start_hour'] }}@endif</p>
+        {{-- <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p>
+        <p>@if (!empty($_GET['date'])){{ $_GET['date'] }}@endif</p>
+        <p>@if (!empty($_GET['hour'])){{ $_GET['hour'] }}@endif</p> --}}
 
         <form action="{{ route('portal.clients.onboarding.step4') }}" class="space-y-6">
-            <x-forms.input type="hidden" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom'] : ''" />
-            <x-forms.input type="hidden" name="start_hour" :value="!empty($_GET['start_hour']) ? $_GET['start_hour'] : ''" />
+            <x-forms.input type="hidden" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom']: null" />
+            <x-forms.input type="hidden" name="date" :value="!empty($_GET['date']) ? $_GET['date']: null" />
+            <x-forms.input type="hidden" name="hour" :value="!empty($_GET['hour']) ? $_GET['hour']: null" />
 
             <div>
                 @php

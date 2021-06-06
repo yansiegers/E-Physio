@@ -21,9 +21,10 @@
         <form action="{{ route('portal.clients.onboarding.submit') }}" method="POST" class="grid grid-cols-2">
             {{ csrf_field() }}
 
+            <x-forms.input type="hidden" name="date" :value="!empty($_GET['date']) ? $_GET['date'] : null" />
+            <x-forms.input type="hidden" name="hour" :value="!empty($_GET['hour']) ? $_GET['hour'] : null" />
             <x-forms.input type="hidden" name="physician_id"
-                :value="!empty($_GET['physician_id']) ? $_GET['physician_id'] : ''" />
-            <x-forms.input type="hidden" name="start_hour" :value="!empty($_GET['start_hour']) ? $_GET['start_hour'] : ''" />
+                :value="!empty($_GET['physician_id']) ? $_GET['physician_id'] : null" />
 
             <div>
                 <h2 class="heading-h2">01 Persoonlijke gegevens</h2>
@@ -99,12 +100,19 @@
                     <div>
                         <div>Datum en tijd</div>
                         @php
-                            $start_date = '12-30-2021';
-                            $start_hour = !empty($_GET['start_hour']) ? $_GET['start_hour'] : '';
-                            $start_date = Carbon\Carbon::createFromFormat('m-d-Y H:i:s', $start_date . ' 00:00:00');
-                            $start_date_time = $start_date->setHour($start_hour)
+                            if (isset($_GET['date']) && isset($_GET['hour'])) {
+                                $date = $_GET['date'];
+                                $hour = $_GET['hour'];
+
+                                $date_time = Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $date . ' 00:00:00');
+                                $start_date_time = $date_time->setHour($hour);
+
+                                $human_date_time = ucfirst($start_date_time->locale('nl')->translatedFormat('l j F \o\m H:i'));
+                            } else {
+                                $human_date_time = "Geen tijd geselecteerd";
+                            }
                         @endphp
-                        <div>{{ ucfirst($start_date_time->locale('nl')->translatedFormat('l j F \o\m H:i')) }}</div>
+                        <div>{{ $human_date_time }}</div>
                     </div>
                     <div>
                         <div>Klacht</div>

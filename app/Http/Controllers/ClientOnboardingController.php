@@ -29,8 +29,8 @@ class ClientOnboardingController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::min(8)],
             'phone_number' => 'required|string|max:255',
-            'start_date' => 'required|date|date_format:m/d/Y|after_or_equal:' . $today,
-            'start_hour' => 'required|numeric|integer|max:255',
+            'date' => 'required|date|date_format:Y-m-d|after_or_equal:' . $today,
+            'hour' => 'required|numeric|integer|max:255',
         ]);
 
         $user = User::create([
@@ -45,15 +45,15 @@ class ClientOnboardingController extends Controller
 
         Auth::login($user);
 
-        // $request->start_hour;
-        // $start_date_time;
+        $date_time = Carbon::createFromFormat('Y-m-d H:i:s', $request->date . ' 00:00:00');
+        $start_date_time = $date_time->setHour($request->hour);
+
         Meeting::create([
             'user_id' => $user->id,
             'physician_id' => $request->physician_id,
             'type' => 'interview',
             'last_name' => $request->last_name,
-            // 'start_date_time' => Carbon::now()->addDays(5)->setHour($request->start_hour)->setMinute('0')->setSecond('0'),
-            'start_date_time' => Carbon::createFromFormat('m-d-Y', $request->start_date)->setHour($request->start_hour),
+            'start_date_time' => $start_date_time,
             'duration' => 60,
         ]);
 
