@@ -115,11 +115,33 @@
                         <div>{{ $human_date_time }}</div>
                     </div>
                     <div>
+                        @php
+                            $symptoms = [
+                                'neck' => 'De nek',
+                                'shoulder_blades' => 'Tussen de schouderbladen',
+                                'lower_back' => 'De onderrug',
+                                'shoulder' => 'De schouder',
+                                'elbow' => 'De elleboog',
+                                'wrist' => 'De pols',
+                                'pelvis' => 'Het bekken',
+                                'buttock' => 'De bil',
+                                'hip' => 'De heup',
+                                'upper_leg' => 'Het bovenbeen',
+                                'knee' => 'De knie',
+                                'lower_leg' => 'Het onderbeen',
+                                'ankle' => 'De enkel',
+                                'fitness' => 'Conditie',
+                                'lungs' => 'Longen',
+                                'other' => 'Overig',
+                            ];
+                            if (isset($_GET['symptom'])) {
+                                $human_symptom = $symptoms[$_GET['symptom']];
+                            } else {
+                                $human_symptom = "Klacht niet bekend";
+                            }
+                        @endphp
                         <div>Klacht</div>
-                        <div>
-                            @if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}
-                            @endif
-                        </div>
+                        <div>{{ $human_symptom }}</div>
                     </div>
                     <div>Totaal: €29,99</div>
                     <x-forms.button class="btn-primary rounded-full" type="submit">Afrekenen</x-forms.button>
