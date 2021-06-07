@@ -45,7 +45,7 @@
                     </div>
                     <div>
                         <x-forms.label for="phone_number" value="Telefoonnummer" />
-                        <x-forms.input id="phone_number" type="tel" name="phone_number" placeholder="0612345678" />
+                        <x-forms.input id="phone_number" type="tel" name="phone_number" :value="old('phone_number')" placeholder="0612345678" />
                     </div>
                     <div>
                         <x-forms.label for="password" value="Wachtwoord*" />

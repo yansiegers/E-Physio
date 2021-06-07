@@ -28,9 +28,11 @@ class ClientOnboardingController extends Controller
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::min(8)],
-            'phone_number' => 'required|string|max:255',
+            'phone_number' => 'max:255',
+
             'date' => 'required|date|date_format:Y-m-d|after_or_equal:' . $today,
-            'hour' => 'required|numeric|integer|max:255',
+            'hour' => 'required|numeric|integer|between:8,16|max:255',
+            'physician_id' => 'required|numeric|integer|max:255|exists:physicians,id',
         ]);
 
         $user = User::create([
@@ -52,7 +54,6 @@ class ClientOnboardingController extends Controller
             'user_id' => $user->id,
             'physician_id' => $request->physician_id,
             'type' => 'interview',
-            'last_name' => $request->last_name,
             'start_date_time' => $start_date_time,
             'duration' => 60,
         ]);
