@@ -1,4 +1,4 @@
-<nav class="container mx-auto px-24 py-8 mb-8 flex justify-between items-center">
+<nav class="container mx-auto px-24 py-8 mb-32 flex justify-between items-center">
     <div class="flex items-center">
         <a href="{{ route('home') }}">
             <x-logo class="block h-10 w-auto" />
