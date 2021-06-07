@@ -19,8 +19,6 @@
         {{ $slot }}
     </main>
 
-    <div class="bg-eph-blue-light mt-8">
-        @include('layouts.pages.footer')
-    </div>
+    @include('layouts.pages.footer')
 </body>
 </html>
