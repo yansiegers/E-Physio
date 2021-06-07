@@ -13,12 +13,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div class="bg-eph-blue-light mb-8">
-        @include('layouts.pages.nav')
-    </div>
+    @include('layouts.pages.nav')
 
-    <!-- Page Content -->
-    <main class="container mx-auto py-5 prose">
+    <main>
         {{ $slot }}
     </main>
 

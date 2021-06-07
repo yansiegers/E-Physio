@@ -44,9 +44,12 @@ module.exports = {
   variants: {
     extend: {
       opacity: ["disabled"],
+
       boxShadow: ['active'],
       backgroundColor: ['active'],
-      borderColor: ['active']
+      borderColor: ['active'],
+
+      borderWidth: ['hover'],
     }
   },
 
