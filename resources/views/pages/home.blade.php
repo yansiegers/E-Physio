@@ -1,4 +1,8 @@
 <x-general-layout>
-    <h1 class="heading-h1 text-center">E-Physio</h1>
-    <x-links.button href="{{ route('portal.clients.onboarding.step1') }}" class="btn-primary rounded-full">Maak een afspraak</x-links.button>
+    <div class="container mx-auto py-5 prose mb-32">
+        <span class="text-eph-purple font-bold">Online fysiotherapie</span>
+        <h1 class="heading-h1">Waar en wanneer het jou uitkomt</h1>
+        <p class="text-eph-grey">Behandeld worden door professionele fysiotherapeuten door heel Nederland.</p>
+        <x-links.button class="btn-primary rounded-full mt-4" href="#">Hoe werkt het?</x-link-button>
+    </div>
 </x-general-layout>
