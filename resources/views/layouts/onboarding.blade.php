@@ -13,17 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <!-- Sidebar -->
-    {{-- <div>
-        @include('layouts.portal.nav')
-
-        @include('layouts.portal.footer')
-    </div>
-
-    <hr> --}}
-
-    <!-- Page Content -->
-    <main class="container mx-auto p-5 bg-eph-purple-light">
+    <main class="container mx-auto p-5 bg-eph-grey-light">
         {{ $slot }}
     </main>
 </body>
