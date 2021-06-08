@@ -1,22 +1,21 @@
-<nav class="container mx-auto lg:px-48 py-5 flex justify-between items-center">
+<nav class="container mx-auto px-24 py-8 mb-32 flex justify-between items-center">
     <div class="flex items-center">
         <a href="{{ route('home') }}">
             <x-logo class="block h-10 w-auto" />
         </a>
     </div>
-
-    <ul class="list-none flex items-center">
-        <x-links.nav :href="route('about')" :active="request()->routeIs('about')">
-            {{ __('Over') }}
-        </x-links.nav>
-        <x-links.nav :href="route('contact')" :active="request()->routeIs('contact')">
-            {{ __('Contact') }}
-        </x-links.nav>
-        <x-links.nav :href="route('faq')" :active="request()->routeIs('faq')">
-            {{ __('Veel gestelde vragen') }}
-        </x-links.nav>
-        <x-links.nav :href="route('blog')" :active="request()->routeIs('blog')">
-            {{ __('Blog') }}
-        </x-links.nav>
+    <ul class="flex items-center space-x-8">
+        {{-- <x-links.nav :href="route('home')" :active="request()->routeIs('home')">Home</x-links.nav> --}}
+        <x-links.nav :href="route('about')" :active="request()->routeIs('about')">Over ons</x-links.nav>
+        <x-links.nav href="#" :active="false">Winkel</x-links.nav>
+        <x-links.nav :href="route('blog')" :active="request()->routeIs('blog')">Blog</x-links.nav>
+        <x-links.nav :href="route('contact')" :active="request()->routeIs('contact')">Contact</x-links.nav>
+        <li class="text-eph-grey">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </a>
+        </li>
     </ul>
 </nav>
