@@ -33,7 +33,7 @@
             </div>
 
             <div class="flex justify-between space-x-4">
-                <x-links.button href="{{ route('portal.clients.onboarding.step1') }}" class="btn-outline-2 rounded-full">
+                <x-links.button href="{{ url()->previous() }}" class="btn-outline-2 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 inline-block align-middle" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
