@@ -26,7 +26,7 @@
                     ];
                 @endphp
                 {{-- <x-forms.label for="symptom" value="Wat is je klacht?*" /> --}}
-                <x-forms.select id="symptom" name="symptom" value="" :list="$symptoms" required />
+                <x-forms.select id="symptom" name="symptom" :list="$symptoms" required />
             </div>
 
             <div class="flex justify-between space-x-4">
