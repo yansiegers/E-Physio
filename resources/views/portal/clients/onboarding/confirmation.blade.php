@@ -80,14 +80,14 @@
                     <div>
                         @php
                             $physicians = [
-                                '0' => 'Harry Tipker',
-                                '1' => 'Jan Jansen',
-                                '2' => 'Hester Ragas',
-                                '3' => 'Sam Hoogland',
-                                '4' => 'Marlies van Veen',
-                                '5' => 'Peter de Vries',
-                                '6' => 'Marleen de Jong',
-                                '7' => 'Jeroen de Jong',
+                                1 => 'Harry Tipker',
+                                2 => 'Jan Jansen',
+                                3 => 'Hester Ragas',
+                                4 => 'Sam Hoogland',
+                                5 => 'Marlies van Veen',
+                                6 => 'Peter de Vries',
+                                7 => 'Marleen de Jong',
+                                8 => 'Jeroen de Jong'
                             ];
                             if (isset($_GET['physician_id'])) {
                                 $physician_name = $physicians[$_GET['physician_id']];

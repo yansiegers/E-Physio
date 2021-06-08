@@ -28,7 +28,7 @@
                         ];
                     @endphp
                     {{-- <x-forms.label value="Wanneer ben je beschikbaar?" /> --}}
-                    <x-forms.radio name="hour" :list="$timeslots" value="8" required />
+                    <x-forms.radio name="hour" :list="$timeslots" required />
                 </div>
             </div>
 
