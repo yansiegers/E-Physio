@@ -106,6 +106,8 @@ There are three parts of the application:
 📄 FAQ page | ❌
 📄 Blog page | ❌
 ⚙️ Blog posts controller | ❌
+📄 Log-in page | ✅
+⚙️ Log-in controller | ✅
 
 2: Client portal | Included?
 --- | ---
@@ -118,17 +120,16 @@ There are three parts of the application:
 🏗️ Lay-out portal (clients) | ❌
 📄 Calendar page (clients) | ❌
 ⚙️ Calendar controller (clients) | ❌
-🏗️ Lay-out account (clients) | ❌
-📄 Log-in page | ✅
-⚙️ Log-in controller | ✅
+📄 Account page (clients) | ❌
+⚙️ Account controller (clients) | ❌
 
 3: Physician portal | Included?
 --- | ---
 🏗️ Lay-out onboarding (physicians) | ❌
 📄 Registration page | ❌
 ⚙️ Registration controller | ❌
-📄 Physician page | ❌
-⚙️ Physician controller | ❌
+📄 Physician profile page | ❌
+⚙️ Physician profile controller | ❌
 🏗️ Lay-out portal (physicians) | ❌
 📄 Profile page | ❌
 ⚙️ Profile controller | ❌
@@ -136,9 +137,8 @@ There are three parts of the application:
 ⚙️ Work week controller | ❌
 📄 Calendar page (physicians) | ❌
 ⚙️ Calendar controller (physicians) | ❌
-🏗️ Lay-out account (physicians) | ❌
-📄 Log-in page | ✅
-⚙️ Log-in controller | ✅
+📄 Account page (clients) | ❌
+⚙️ Account controller (clients) | ❌
 
 ## Technical details
 
