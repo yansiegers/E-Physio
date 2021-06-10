@@ -1,56 +1,43 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@section('title', 'Log in')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+<x-general-layout>
+    <div class="ml-64 mt-16 mb-32 grid grid-cols-2">
+        <div class="flex flex-col justify-center items-start">
+            <x-auth.card class="w-4/6">
+                <x-slot name="links">
+                    <div class="font-mulish py-4 border-b-2 border-eph-blue">
+                        Inloggen
+                    </div>
+                    <div class="font-mulish py-4 hover:border-b-2 hover:border-eph-grey text-eph-grey">
+                        <a href="{{ route('register') }}">Registreren</a>
+                    </div>
+                </x-slot>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
+                <form class="space-y-12" action="{{ route('login') }}" method="post">
+                    <div>
+                        <x-forms.label for="email" value="E-mailadres" />
+                        <x-forms.input class="w-full" id="email" type="email" name="email" :value="old('email')"
+                            placeholder="e-mail@voorbeeld.nl" required />
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <x-forms.label for="password" value="Wachtwoord" />
+                            <x-forms.input class="w-full" id="password" type="password" name="password" placeholder="Wachtwoord"
                                 required autocomplete="current-password" />
-            </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+                        </div>
+                        {{-- Remember me --}}
+                        <div>
+                            <x-forms.input id="remember_me" type="checkbox" />
+                            <x-forms.label for="remember_me" class="inline" value="Onthoud wachtwoord" />
+                        </div>
+                    </div>
+                    {{-- Forgot password --}}
+                    <x-forms.button class="btn-primary rounded-full mt-4" type="submit">Inloggen</x-forms.button>
+                </form>
+            </x-auth.card>
+        </div>
+        <div class="flex flex-col justify-center items-end">
+            <img class="w-5/6" src="{{ asset('img/client-portal-login.png') }}" alt="">
+        </div>
+    </div>
+</x-general-layout>
