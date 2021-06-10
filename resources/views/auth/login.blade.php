@@ -4,15 +4,6 @@
     <div class="ml-64 grid grid-cols-2">
         <div class="flex flex-col justify-center items-start">
             <x-auth.card class="w-4/6">
-                <x-slot name="links">
-                    <div class="font-mulish py-4 border-b-2 border-eph-blue">
-                        Inloggen
-                    </div>
-                    <div class="font-mulish py-4 hover:border-b-2 hover:border-eph-grey text-eph-grey">
-                        <a href="{{ route('register') }}">Registreren</a>
-                    </div>
-                </x-slot>
-
                 <form class="space-y-12" action="{{ route('login') }}" method="post">
                     <div>
                         <x-forms.label for="email" value="E-mailadres" />
@@ -25,7 +16,6 @@
                             <x-forms.input class="w-full" id="password" type="password" name="password" placeholder="Wachtwoord"
                                 required autocomplete="current-password" />
                         </div>
-                        {{-- Remember me --}}
                         <div>
                             <x-forms.input id="remember_me" type="checkbox" />
                             <x-forms.label for="remember_me" class="inline" value="Onthoud wachtwoord" />
