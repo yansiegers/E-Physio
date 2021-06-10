@@ -17,6 +17,9 @@
                             <x-forms.label for="password" value="Wachtwoord" />
                             <x-forms.input class="w-full" id="password" type="password" name="password" placeholder="Wachtwoord"
                                 required autocomplete="current-password" />
+                            <p class="mt-3 text-sm text-right">
+                                <a class="link " href="{{ route('password.request') }}">Wachtwoord vergeten?</a>
+                            </p>
                         </div>
                         <div>
                             <x-forms.input id="remember_me" type="checkbox" />
