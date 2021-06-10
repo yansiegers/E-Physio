@@ -4,7 +4,9 @@
     <div class="ml-64 grid grid-cols-2">
         <div class="flex flex-col justify-center items-start">
             <x-auth.card class="w-4/6">
+                <x-auth.validation-errors class="" :errors="$errors" />
                 <form class="space-y-12" action="{{ route('login') }}" method="post">
+                    @csrf
                     <div>
                         <x-forms.label for="email" value="E-mailadres" />
                         <x-forms.input class="w-full" id="email" type="email" name="email" :value="old('email')"
