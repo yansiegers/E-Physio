@@ -1,4 +1,4 @@
-<div class="h-2 mt-8 bg-gradient-to-r from-eph-purple-light to-eph-purple"></div>
+<div class="h-2 bg-gradient-to-r from-eph-purple-light to-eph-purple"></div>
 <footer class="px-64 pt-8 pb-16 grid grid-cols-4 text-base">
     <div class="flex flex-col justify-between">
         <a href="{{ route('home') }}">

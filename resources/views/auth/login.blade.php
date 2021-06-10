@@ -1,7 +1,7 @@
 @section('title', 'Log in')
 
-<x-general-layout>
-    <div class="ml-64 mt-16 mb-32 grid grid-cols-2">
+<x-general-layout class="mt-16 mb-32">
+    <div class="ml-64 grid grid-cols-2">
         <div class="flex flex-col justify-center items-start">
             <x-auth.card class="w-4/6">
                 <x-slot name="links">

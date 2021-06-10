@@ -15,7 +15,7 @@
 <body>
     @include('layouts.pages.nav')
 
-    <main>
+    <main {{ $attributes->merge(['class' => 'mt-32 mb-8']) }}>
         {{ $slot }}
     </main>
 
