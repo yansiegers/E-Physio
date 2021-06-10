@@ -26,7 +26,6 @@
                             <x-forms.label for="remember_me" class="inline" value="Onthoud wachtwoord" />
                         </div>
                     </div>
-                    {{-- Forgot password --}}
                     <x-forms.button class="btn-primary rounded-full mt-4" type="submit">Inloggen</x-forms.button>
                 </form>
             </x-auth.card>
