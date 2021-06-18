@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientOnboardingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,27 @@ Route::get('/privacybeleid', function () {
 })->name('privacy');
 
 // ========= Portal ======================================================
+
+Route::get('/klachten', function () {
+    return view('portal.clients.onboarding.symptoms');
+})->name('portal.clients.onboarding.step1');
+
+Route::get('/afspraak-maken', function () {
+    return view('portal.clients.onboarding.planner');
+})->name('portal.clients.onboarding.step2');
+
+Route::get('/fyiotherapeuten', function () {
+    return view('portal.clients.onboarding.choices');
+})->name('portal.clients.onboarding.step3');
+
+Route::get(
+    '/bevestiging', [ClientOnboardingController::class, 'create']
+)->name('portal.clients.onboarding.step4');
+
+Route::post(
+    '/verzenden', [ClientOnboardingController::class, 'store']
+)->name('portal.clients.onboarding.submit');
+
 
 // Route::get('/dashboard', function () {
 //     return view('portal.dashboard');

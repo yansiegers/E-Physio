@@ -28,18 +28,27 @@ class Radio extends Component
     public $value;
 
     /**
+     * If the  value of the list.
+     *
+     * @var string
+     */
+    public $required;
+
+    /**
      * Create a new component instance.
      *
      * @param string $name
      * @param array $list
      * @param string $value
+     * @param string $required
      * @return void
      */
-    public function __construct($name, $list, $value)
+    public function __construct($name, $list, $value = null, $required = null)
     {
         $this->name = $name;
         $this->list = $list;
         $this->value = $value;
+        $this->required = $required != null;
     }
 
     /**
