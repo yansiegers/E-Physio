@@ -18,3 +18,4 @@ switch ($type) {
 
 <input
     {{ $attributes->class([$classes, 'border-eph-grey-light text-eph-grey' => $attributes->has('disabled')])->merge(['type' => $type]) }}>
+    {{-- 'pattern' => '\d{4}-\d{2}-\d{2}' --}}
