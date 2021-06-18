@@ -1,7 +1,7 @@
 @props(['href' => '#', 'rel' => null, 'target' => null, 'active' => false])
 
 @php
-    if ($active == true) {
+    if ($active) {
         $li_classes = 'p-1 border-b border-eph-blue';
         $a_classes = 'text-eph-blue';
     } else {
