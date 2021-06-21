@@ -2,7 +2,7 @@
     @foreach ($list as $item => $label)
         <div>
             <x-forms.input id="{{ $name . $item }}" type="radio" name="{{ $name }}" value="{{ $item }}"
-                :checked="$item == $value ? 'checked' : null" />
+                :checked="$item == $value ? 'checked' : null" :required="$required ? 'required' : null" />
             <x-forms.label for="{{ $name . $item }}" value="{{ $label }}" class="inline" />
         </div>
     @endforeach
