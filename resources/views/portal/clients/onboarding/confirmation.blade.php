@@ -4,7 +4,7 @@
         <form id="confirmation" action="{{ route('portal.clients.onboarding.submit') }}" method="POST"
             class="pl-32 pr-10 py-20 bg-eph-grey-light">
             <h1 class="heading-h2 mb-8">4. Afspraakbevestiging</h1>
-            {{-- resources\views\components\auth-validation-errors.blade.php --}}
+
             @if ($errors->any())
                 <div>
                     <div class="font-medium text-red-600">
@@ -68,7 +68,6 @@
                         @php
                             $paying_options = ['AfterPay', 'iDEAL'];
                         @endphp
-                        {{-- <x-forms.label value="Hoe wil je betalen?" /> --}}
                         <x-forms.radio class="grid grid-cols-2 gap-6" name="paying_option" :list="$paying_options"
                             value="AfterPay" />
                     </div>
@@ -170,11 +169,4 @@
         </div>
 
         @include('layouts.portal.clients.onboarding.navigation', ['form' => null, 'with_next' => false])
-
-        {{-- <div class="hidden">
-            <x-links.button href="{{ route('portal.clients.onboarding.step3') }}" class="btn-outline-1 rounded-full">
-                Stap 3</x-links.button>
-            <x-links.button href="{{ route('portal.clients.onboarding.step1') }}" class="btn-outline-2 rounded-full">
-                Stap 1</x-links.button>
-        </div> --}}
     </x-onboarding-layout>

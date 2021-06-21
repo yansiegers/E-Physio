@@ -3,7 +3,6 @@
     <x-onboarding-layout>
         <div class="px-32 py-20">
             <h1 class="heading-h1 mb-16">2. Afspraak inplannen</h1>
-            {{-- <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p> --}}
             <form id="planner" action="{{ route('portal.clients.onboarding.step3') }}" method="GET" class="grid grid-cols-2">
                 <x-forms.input type="hidden" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom']: null" />
                 <div>
@@ -25,7 +24,6 @@
                             '16' => '16:00 t/m 17:00',
                         ];
                     @endphp
-                    {{-- <x-forms.label value="Wanneer ben je beschikbaar?" /> --}}
                     <x-forms.radio name="hour" :list="$timeslots" required />
                 </div>
 

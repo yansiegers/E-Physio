@@ -31,10 +31,6 @@
                 </div>
             </div>
 
-            {{-- <p>@if (!empty($_GET['symptom'])){{ $_GET['symptom'] }}@endif</p> --}}
-            {{-- <p>@if (!empty($_GET['date'])){{ $_GET['date'] }}@endif</p> --}}
-            {{-- <p>@if (!empty($_GET['hour'])){{ $_GET['hour'] }}@endif</p> --}}
-
             <form id="choices" action="{{ route('portal.clients.onboarding.step4') }}" class="space-y-6">
                 <x-forms.input type="hidden" name="date" :value="!empty($_GET['date']) ? $_GET['date']: null" />
                 <x-forms.input type="hidden" name="hour" :value="!empty($_GET['hour']) ? $_GET['hour']: null" />
@@ -52,7 +48,6 @@
                             8 => 'Jeroen de Jong',
                         ];
                     @endphp
-                    {{-- <x-forms.label value="Welke fysiotherapeut past bij jou?" /> --}}
                     <x-forms.radio class="grid grid-cols-4 gap-6" name="physician_id" :list="$physicians" required />
                 </div>
 
