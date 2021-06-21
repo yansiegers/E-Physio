@@ -47,26 +47,6 @@
             <p class="text-eph-grey text-base mt-6 mr-16 leading-loose">Behandeld worden door professionele fysiotherapeuten door heel Nederland.</p>
 
             <style>
-                .btn-primary {
-                    animation: pulse 1.5s infinite;
-                    }
-                    .btn-primary:hover {
-                    animation: none;
-                    }
-                    @keyframes pulse {
-                    0% {
-                        transform: scale(0.95);
-                        box-shadow: 0 0 0 0px rgb(168, 80, 255);
-                    }
-                    70% {
-                        transform: scale(1);
-                        box-shadow: 0 0 0 11px rgba(88, 120, 243, 0);
-                    }
-                        100% {
-                        transform: scale(0.95);
-                        box-shadow: 0 0 0 0 rgba(88, 120, 243, 0);
-                    }
-                    }
             </style>
 
             <div class="py-5">
