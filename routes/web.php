@@ -78,6 +78,6 @@ Route::get('/design-kit', function () {
     return view('pages.design-kit');
 })->name('design-kit');
 
-Route::get('/motion-design', function () {
-    return view('motion-design');
-})->name('motion-design');
+Route::get('/motion-guide', function () {
+    return view('pages.motion-guide');
+})->name('motion-guide');
