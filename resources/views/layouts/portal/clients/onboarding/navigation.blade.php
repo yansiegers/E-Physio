@@ -8,7 +8,7 @@
         Terug
     </a>
 
-    <x-forms.button class="btn-outline-1 rounded-full" type="submit">
+    <x-forms.button class="btn-outline-1 rounded-full" type="submit" form="{{ $form }}">
         Volgende
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 inline-block align-middle" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">

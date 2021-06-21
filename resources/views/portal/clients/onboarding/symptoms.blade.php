@@ -5,7 +5,7 @@
         <div class="pl-10 pr-32 py-20">
             <h1 class="heading-h1 mb-16">1. Wat is je klacht?</h1>
 
-            <form action="{{ route('portal.clients.onboarding.step2') }}" method="GET" class="space-y-6">
+            <form id="symptoms" action="{{ route('portal.clients.onboarding.step2') }}" method="GET" class="space-y-6">
                 <div>
                     @php
                         $symptoms = [
@@ -40,5 +40,5 @@
             </form>
         </div>
 
-        @include('layouts.portal.clients.onboarding.navigation')
+        @include('layouts.portal.clients.onboarding.navigation', ['form' => 'symptoms'])
     </x-onboarding-layout>
