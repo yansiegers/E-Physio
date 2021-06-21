@@ -5,7 +5,7 @@
 @tailwind utilities;
 @layer utilities {
   body {
-    @apply font-inter font-normal text-xl text-eph-black !important;
+    @apply font-inter font-normal text-eph-black !important;
   }
   .body-small {
     @apply text-base !important;
