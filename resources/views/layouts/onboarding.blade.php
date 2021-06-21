@@ -13,7 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <main class="container mx-auto p-5 bg-eph-grey-light">
+    <main {{ $attributes->merge(['class' => '']) }}>
         {{ $slot }}
     </main>
 </body>
