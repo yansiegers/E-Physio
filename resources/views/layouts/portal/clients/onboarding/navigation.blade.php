@@ -1,7 +1,7 @@
 @php
     $classes = "absolute bottom-0 px-32 py-16";
     if (isset($with_next) ? $with_next : true) {
-        $classes .= "w-screen flex justify-between";
+        $classes .= " w-screen flex justify-between";
     }
 @endphp
 

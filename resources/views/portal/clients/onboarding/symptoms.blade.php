@@ -30,13 +30,6 @@
                     <x-forms.label for="symptom" value="Wat is je klacht?*" />
                     <x-forms.select id="symptom" name="symptom" :list="$symptoms" required />
                 </div>
-
-                <div class="hidden">
-                    <x-links.button href="{{ route('portal.clients.onboarding.step4') }}"
-                    class="btn-outline-2 rounded-full">Stap 4</x-links.button>
-                    <x-links.button href="{{ route('portal.clients.onboarding.step2') }}"
-                    class="btn-outline-2 rounded-full">Stap 2</x-links.button>
-                </div>
             </form>
         </div>
 

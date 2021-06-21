@@ -25,15 +25,16 @@
                             'other' => 'Overig',
                         ];
                     @endphp
-                    <x-forms.label for="symptom" value="Specialiteit*" />
-                    <x-forms.select id="symptom" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom']: null"
-                        :list="$symptoms" required />
                 </div>
             </div>
 
             <form id="choices" action="{{ route('portal.clients.onboarding.step4') }}" class="space-y-6">
                 <x-forms.input type="hidden" name="date" :value="!empty($_GET['date']) ? $_GET['date']: null" />
                 <x-forms.input type="hidden" name="hour" :value="!empty($_GET['hour']) ? $_GET['hour']: null" />
+                
+                <x-forms.label for="symptom" value="Specialiteit*" />
+                <x-forms.select id="symptom" name="symptom" :value="!empty($_GET['symptom']) ? $_GET['symptom']: null"
+                    :list="$symptoms" required />
 
                 <div>
                     @php
@@ -49,13 +50,6 @@
                         ];
                     @endphp
                     <x-forms.radio class="grid grid-cols-4 gap-6" name="physician_id" :list="$physicians" required />
-                </div>
-
-                <div class="hidden">
-                    <x-links.button href="{{ route('portal.clients.onboarding.step2') }}"
-                        class="btn-outline-1 rounded-full">Stap 2</x-links.button>
-                    <x-links.button href="{{ route('portal.clients.onboarding.step4') }}"
-                        class="btn-outline-2 rounded-full">Stap 4</x-links.button>
                 </div>
             </form>
         </div>

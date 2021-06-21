@@ -26,13 +26,6 @@
                     @endphp
                     <x-forms.radio name="hour" :list="$timeslots" required />
                 </div>
-
-                <div class="hidden">
-                    <x-links.button href="{{ route('portal.clients.onboarding.step1') }}" class="btn-outline-1 rounded-full">
-                        Stap 1</x-links.button>
-                    <x-links.button href="{{ route('portal.clients.onboarding.step3') }}" class="btn-outline-2 rounded-full">
-                        Stap 3</x-links.button>
-                </div>
             </form>
         </div>
 
