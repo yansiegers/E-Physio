@@ -132,6 +132,14 @@
   .btn-outline-2:hover {
     @apply bg-eph-blue text-eph-white !important;
   }
+
+  /* Outline 3 */
+  .btn-outline-3 {
+    @apply bg-eph-white text-eph-grey border border-eph-black-light !important;
+  }
+  .btn-outline-3:hover {
+    @apply bg-eph-blue text-eph-white !important;
+  }
 }
 
 /*  -Colors- */

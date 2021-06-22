@@ -61,6 +61,7 @@
             <x-links.button class="btn-secondary rounded-full">Secondary</x-links.button>
             <x-links.button class="btn-outline-1 rounded-full">Outline 1</x-links.button>
             <x-links.button class="btn-outline-2 rounded-full">Outline 2</x-links.button>
+            <x-links.button class="btn-outline-3 rounded-full">Outline 3</x-links.button>
 
             {{-- <ul class="list-none">
                 <x-links.nav href="#" :active="false">Normale navigatielink</x-links.nav>
