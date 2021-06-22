@@ -26,7 +26,7 @@ class Select extends Component
      * @param string $value
      * @return void
      */
-    public function __construct($list, $value)
+    public function __construct($list, $value = null)
     {
         $this->list = $list;
         $this->value = $value;

@@ -24,4 +24,17 @@ class Meeting extends Model
     {
         return $this->belongsTo(Physician::class);
     }
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'user_id',
+        'physician_id',
+        'type',
+        'start_date_time',
+        'duration',
+    ];
 }

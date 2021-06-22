@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "yansiegers/e-physio",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "A project for e-physio within the study CMD of NHL Stenden.",
+    "keywords": ["laravel-framework", "laravel", "cmd", "tailwind", "nhlstenden", "thenextweb"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -10,7 +10,8 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "nesbot/carbon": "^2.48"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
